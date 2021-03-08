@@ -1,0 +1,56 @@
+[
+    {
+        "Title": "Huis #1: Groot Huis",
+        "Information": {
+            "a": "Dit is een groot huis, een beschrijving",
+            "b": "Erfpacht",
+            "c": "Geen Tuin",
+            "d": "Veel Gezelligheid"
+        }
+    },
+    {
+        "Title": "Huis #2: Huis",
+        "Information": {
+            "a": "The Human centipede",
+            "b": "The Ventje",
+            "c": "A Chrismas",
+            "d": "A Big Husband"
+        }
+    },
+    {
+        "Title": "Huis #3: Boerenhuis",
+        "Information": {
+            "a": "The Fighting maniac",
+            "b": "A Set-up",
+            "c": "Over the Rainbow",
+            "d": "Joy"
+        }
+    },
+    {
+        "Title": "Huis #4: Huis returns",
+        "Information": {
+            "a": "Playstation Network",
+            "b": "Fire sale on the docks",
+            "c": "Squirrel",
+            "d": "Hospitalized frat-boy"
+        }
+    },
+    {
+        "Title": "What is love?",
+        "Information": {
+            "a": "Baby",
+            "b": "Dont",
+            "c": "Hurt",
+            "d": "Me"
+        }
+    },
+    {
+        "Title": "666",
+        "Information": {
+            "a": "Authorized clientelle",
+            "b": "Disgusted Cucumber",
+            "c": "Everymans work",
+            "d": "Aquaducts on the moon"
+        }
+    }
+]

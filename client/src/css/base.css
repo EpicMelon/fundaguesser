@@ -1,0 +1,125 @@
+body {
+    font-family: 'proxima-nova', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background-color: #F7A100;
+}
+
+/* Logo */
+.logoStyle {
+    font-family: inherit;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    text-align: center;
+}
+
+.bigLogo {
+    font-size: 5.5vw;
+    width: 40%;
+    margin: 5% 30% 5% 30%;
+}
+
+/* Buttons */
+
+.blueButton {
+    cursor: pointer;
+    background-color: #0071b3;
+    border-color: #0071b3;
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(0,0,0,.1),inset 0 0 0 rgba(0,0,0,.1);
+    padding: 1.5rem 1.5rem;
+
+    font-family:inherit;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+
+    border-radius: 2px;
+}
+
+.blueButton:hover {
+    background-color: #006199;
+}
+
+.bigButton {
+    font-size: 2.5vw;
+    width: 30%;
+    margin: 0% 35%;
+}
+
+/* Input fields */
+.whiteWrite {
+    font-family: inherit;
+
+    padding: 11px 16px;
+
+    border-radius: 2px;
+
+    border: 1px solid #fff;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+    padding-right: .75rem;
+}
+
+.whiteWrite:hover {
+    border: 1px solid #999;
+}
+
+.whiteWrite:focus {
+    border: 1px solid #999;
+}
+
+.setNameDiv {
+    width: 40%;
+    margin: 0% auto;
+}
+
+.setNameWrite {
+    font-size: 2vw;
+    width: 60%;
+}
+
+.bigWriteDiv {
+    width: 15%;
+    margin: 2% auto;
+}
+
+.bigWrite {
+    font-size: 2vw;
+    width: 30%;
+}
+
+.bigWriteButton {
+    font-size: 150%;
+}
+
+/* Error */
+.error {
+    font-family: inherit;
+    background-color: rgb(165, 23, 23);
+    color:#fff;
+    text-align: center;
+    padding: 1rem;
+    border: 1px #721a08 solid;
+    border-radius: 2px;
+
+    position: absolute;
+    bottom: 10%;
+    right:5%;
+    left:5%;
+    /* margin-left:-25%; */
+
+    /* todo: fancy animaties */
+    transition: 0.1s;
+}
+
+.error:hover {
+    border: 5=1px #290c06 solid;
+    background-color: rgb(158, 23, 23);
+}
