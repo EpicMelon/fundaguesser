@@ -52,7 +52,7 @@ function ChatRoom() {
 
             <ul>
                 { messages.map((msg) => (
-                    <li>{msg}</li>
+                    <ChatMessage text={msg} />
                 ))}
             </ul>
 

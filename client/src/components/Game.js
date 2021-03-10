@@ -6,7 +6,13 @@ import {SocketContext, socket} from '../context/socket';
 import Logo from './Menu/Logo';
 
 import SetName from './Game/SetName';
-import GameLobby from './Game/GameLobby';
+import LeaveGame from './Game/LeaveGame';
+import UserList from './Game/UserList';
+import ChatRoom from './Game/ChatRoom';
+
+import GameInterface from './Game/GameInterface';
+
+
 
 import '../css/base.css';
 
@@ -15,7 +21,6 @@ const Game = () => {
     const history = useHistory();
 
     const [joined, setJoined] = useState(false);
-
 
     // request
     const setNameAndJoin = useCallback((data) => {
@@ -57,10 +62,15 @@ const Game = () => {
 
     return (
         <SocketContext.Provider value={socket}>
+        <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
                 <div>
-                    <GameLobby/>
-                </div>     
+                    <LeaveGame />
+                    <h1> Welcome to Room {roomId} </h1>
+                    <UserList />
+                    <ChatRoom />
+                    <GameInterface />
+                </div>
                 ) : (
                 <div>
                     <Logo/>

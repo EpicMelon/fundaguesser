@@ -79,11 +79,6 @@ class GameRoom {
     }
 
     removePlayer(socketId) {
-        // cosmetic
-        io.to(this.id).emit('showMessage', this.playersData[socketId].username + " left!");
-        io.to(this.id).emit('updatePlayerList', this.playersData);
-        console.log("[Room " + this.id + "] " + this.playersData[socketId].username + " left");   
-
         // remove player
         this.players = this.players.filter(e => e !== socketId);
 
@@ -92,16 +87,29 @@ class GameRoom {
             return;
         }
 
+        if (this.playersData[socketId].leader) {
+            this.playersData[this.players[0]].leader = true;
 
-        if (this.playersData[socketId]) {
-            this.playersData[this.players[0]] = true;
+            var state = {started: this.inProgress, leader: true};
+            io.to(this.players[0]).emit("updateGameState", state);
         }
 
+        var username = this.playersData[socketId].username;
+
         delete this.playersData[socketId];
+
+        // cosmetic
+        io.to(this.id).emit('showMessage', username + " left!");
+        io.to(this.id).emit('updatePlayerList', this.playersData);
+        console.log("[Room " + this.id + "] " + username + " left");   
     }
 
     aboutToStart() {
         this.inProgress = true;
+
+        // let everyone know the game has started
+        var state = {started: true, leader: false};
+        io.to(this.id).emit("updateGameState", state);
 
         // choose houses or something
         this.currentHouse = 0; // place holder is just an integer LOL

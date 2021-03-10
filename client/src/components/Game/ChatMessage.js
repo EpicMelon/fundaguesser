@@ -1,10 +1,8 @@
 import React from 'react'
 
-function ChatMessage() {
+function ChatMessage({text}) {
     return (
-        <div>
-            
-        </div>
+        <li>{text}</li>
     )
 }
 

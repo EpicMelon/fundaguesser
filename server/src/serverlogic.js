@@ -1,6 +1,7 @@
 // server.js handles all the top level logic
 //  connecting, creating rooms, disconnecting, etc.
 //  the actual game (and data!) is in game
+// const { SOCKET_URL } = require('../../client/src/context/config.js');
 const game = require('./fundaguesser.js');
 
 // SETTINGS
@@ -32,6 +33,7 @@ var initSocket = function(socket) {
     socket.on('setUsername', (username) => setUsername(socket, username));
 
     socket.on('myGameDataRequest', () => myGameDataRequest(socket));
+    socket.on('requestGameState', () => requestGameState(socket));
 
     game.initSocket(socket);
 }
@@ -201,6 +203,14 @@ function myGameDataRequest(socket) {
     if (game.data[socket.roomId]) {
         socket.emit('updatePlayerList', game.data[socket.roomId].playersData);
     }
+}
+
+function requestGameState(socket) {
+    var started = game.data[socket.roomId].inProgress;
+    var leader = game.data[socket.roomId].playersData[socket.id].leader;
+
+    var state = {started: started, leader: leader};
+    socket.emit("updateGameState", state);
 }
 
 
