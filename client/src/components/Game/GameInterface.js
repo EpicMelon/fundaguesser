@@ -1,7 +1,9 @@
 import React, {useContext, useCallback, useEffect, useState} from 'react';
 import { useHistory, useParams } from "react-router-dom";
 
-import logo from '../../images/logo.png';
+import Display from './Display';
+import Timer from './Timer';
+import Input from './Input';
 
 import {SocketContext, socket} from '../../context/socket';
 
@@ -45,8 +47,9 @@ function GameInterface() {
         <div>
             {started ? (
                 <div>
-                     look at this house
-                     <img src={logo} alt="Logo" />;
+                     <Timer />
+                     <Input />
+                     <Display />
                 </div>
 
 
