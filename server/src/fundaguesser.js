@@ -5,12 +5,20 @@
 
 // Settings
 MAX_PLAYERS = 8
-DEFAULT_GUESS = 10000
+DEFAULT_GUESS = 0
 
-ROUND_TIME = 5000;
-RESULT_TIME = 4000;
+ROUND_TIME = 10000;
+RESULT_TIME = 6000;
 
 HOUSE_COUNT = 5; // PLACEHOLDER
+
+
+// Data management
+var fs = require('fs');
+var housedata = fs.readFileSync('src/houses.json', 'utf8');
+var houses = JSON.parse(housedata);
+
+// Game management
 
 function pointGraph(guess, correct) {
     var percWrong = Math.abs(guess - correct) / correct * 100;
@@ -44,6 +52,7 @@ class GameRoom {
 
         this.playersData = {}
 
+        this.currentDeadLine;
         this.currentTimeout;
         this.currentHouse;
 
@@ -90,8 +99,7 @@ class GameRoom {
         if (this.playersData[socketId].leader) {
             this.playersData[this.players[0]].leader = true;
 
-            var state = {started: this.inProgress, leader: true};
-            io.to(this.players[0]).emit("updateGameState", state);
+            io.to(this.players[0]).emit("updateLeader", true);
         }
 
         var username = this.playersData[socketId].username;
@@ -107,10 +115,6 @@ class GameRoom {
     aboutToStart() {
         this.inProgress = true;
 
-        // let everyone know the game has started
-        var state = {started: true, leader: false};
-        io.to(this.id).emit("updateGameState", state);
-
         // choose houses or something
         this.currentHouse = 0; // place holder is just an integer LOL
     }
@@ -118,13 +122,12 @@ class GameRoom {
     end() {
         this.inProgress = false;
 
-        // send back to overview or something
-        io.to(this.id).emit('done');
+        io.to(this.id).emit('endGame');
     }
 
     resetGuesses() {
         for (const [key, value] of Object.entries(this.playersData)) {
-            this.playersData[socketId].guess = DEFAULT_GUESS;
+            this.playersData[key].guess = DEFAULT_GUESS;
         }
     }
 
@@ -139,6 +142,18 @@ class GameRoom {
 
         // cosmetic
         io.to(this.id).emit("showScore", "scores are in bitches");
+    }
+
+    emitCurrentHouse(socket) {
+        var roundData = {house : houses[this.currentHouse],
+            timer : this.currentDeadLine}
+
+        if (socket) {
+            socket.emit('startRound', roundData);
+        }
+        else {
+            io.to(this.id).emit('startRound', roundData);
+        }
     }
 }
 
@@ -194,25 +209,29 @@ function startGame(socket) {
 
 
 function startRound(roomId) {
+    if (data[roomId].currentHouse >= houses.length) {
+        data[roomId].end();
+        return;
+    }
+    // prepare round
     data[roomId].resetGuesses();
 
-    showHouse(roomId);
-    io.to(roomId).emit('startTimer', new Date().getTime() + data[roomId].roundTime);
-
+    data[roomId].currentDeadLine = new Date().getTime() + data[roomId].roundTime;
     data[roomId].currentTimeout = setTimeout(function() {endRound(roomId)}, data[roomId].roundTime);
-}
 
-function showHouse(roomId) {
-    console.log("showing house " + data[roomId].currentHouse + " to room " + roomId);
-    io.to(roomId).emit('showHouse', 'Pretend I am house #' + data[roomId].currentHouse);
+    data[roomId].emitCurrentHouse(null);
 }
 
 function endRound(roomId) {
-    var correctAmount = (data[roomId].currentHouse+1) * 100000; // placeholder
+    var correctAmount = houses[data[roomId].currentHouse].price;
 
     data[roomId].evaluateGuesses(correctAmount);
-
     data[roomId].currentHouse++;
+
+    var resultData = {playersData: data[roomId].playersData,
+                        correct: correctAmount}
+
+    io.to(roomId).emit('showResults', resultData);
 
     if (data[roomId].currentHouse > HOUSE_COUNT) {
         data[roomId].end();

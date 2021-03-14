@@ -33,7 +33,7 @@ function CreateGame() {
     }, [socket, createGameConfirmed]);
 
     return (
-        <button bordered onClick={createGameRequest} className="blueButton bigButton">
+        <button onClick={createGameRequest} className="blueButton bigButton">
             Create Game
         </button>
     )

@@ -51,13 +51,13 @@ function ChatRoom() {
             </form>
 
             <ul>
-                { messages.map((msg) => (
-                    <ChatMessage text={msg} />
+                { messages.map((msg, index) => (
+                    <li key={index}> {msg} </li>
                 ))}
             </ul>
 
         </div>
     )
-}
+} // <li key={index}> <ChatMessage text={messages[index]} index={index}/> </li>
 
 export default ChatRoom

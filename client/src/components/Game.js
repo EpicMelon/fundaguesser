@@ -12,8 +12,6 @@ import ChatRoom from './Game/ChatRoom';
 
 import GameInterface from './Game/GameInterface';
 
-
-
 import '../css/base.css';
 
 const Game = () => {
@@ -56,7 +54,7 @@ const Game = () => {
           // before the component is destroyed
           // unbind all event handlers used in this component
             socket.off("confirmedJoinRoom", (id) => joinGameConfirmed(id));
-            socket.on("error", (msg) => joinGameDenied(msg));
+            socket.off("error", (msg) => joinGameDenied(msg));
         };
     }, [socket, joinGameConfirmed, joinGameDenied]);
 

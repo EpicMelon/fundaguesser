@@ -1,56 +1,109 @@
 [
     {
-        "Title": "Huis #1: Groot Huis",
-        "Information": {
-            "a": "Dit is een groot huis, een beschrijving",
-            "b": "Erfpacht",
-            "c": "Geen Tuin",
-            "d": "Veel Gezelligheid"
-        }
+        "title": "Charlie Parkerstraat 13",
+        "information": {
+            "woonoppervlakte": "111",
+            "slaapkamers": "3",
+            "omschrijving": "In de populaire Jazzwijk (Nieuw West), Park Haagseweg (ontworpen door de beroemde architectengroep Mecanoo)."
+        },
+        "images": [
+            {"original":"https://cloud.funda.nl/valentina_media/140/968/759_1080x720.jpg", 
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/968/759_1080x720.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/968/776_1080.jpg",
+                "thumbnail":"https://cloud.funda.nl/valentina_media/140/968/776_1080.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/968/809_1080.jpg", 
+                "thumbnail":"https://cloud.funda.nl/valentina_media/140/968/809_1080.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/968/812_1080.jpg",
+                "thumbnail":"https://cloud.funda.nl/valentina_media/140/968/812_1080.jpg"}
+        ],
+        "price": "550000"
     },
     {
-        "Title": "Huis #2: Huis",
-        "Information": {
-            "a": "The Human centipede",
-            "b": "The Ventje",
-            "c": "A Chrismas",
-            "d": "A Big Husband"
-        }
+        "title": "Prinsengracht 611",
+        "information": {
+            "woonoppervlakte": "221",
+            "slaapkamers": "4",
+            "omschrijving": "Is recent compleet gerenoveerd met materialen van hoge kwaliteit. Elektra, riolering, houten vloeren, stuukwerk keukens, badkamers etc. zijn vervangen. Het gebouw is uitgerust met een lift en een inpandige parkeerplaats"
+        },
+        "images" : [
+            {"original":"https://cloud.funda.nl/valentina_media/140/904/569_1080x720.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/904/569_1080x720.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/904/702_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/904/702_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/904/714_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/904/720_720x480.jpg"}            
+        ],
+        "price": "2000000"
     },
     {
-        "Title": "Huis #3: Boerenhuis",
-        "Information": {
-            "a": "The Fighting maniac",
-            "b": "A Set-up",
-            "c": "Over the Rainbow",
-            "d": "Joy"
-        }
+        "title": "Keverberg 45",
+        "information": {
+            "woonoppervlakte": "158",
+            "slaapkamers": "6",
+            "omschrijving": "Is een grote hoeveelheid aan leefruimte belangrijk voor je? Wil je wonen in een groene én kindvriendelijke buurt? Ben je op zoek naar een fraaie tussenwoning met een centrale ligging?"
+        },
+        "images" : [
+            {"original":"https://cloud.funda.nl/valentina_media/140/736/532_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/736/532_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/736/481_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/736/481_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/736/518_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/736/518_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/736/550_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/736/550_720x480.jpg"}
+        ],
+        "price": "825000"
     },
     {
-        "Title": "Huis #4: Huis returns",
-        "Information": {
-            "a": "Playstation Network",
-            "b": "Fire sale on the docks",
-            "c": "Squirrel",
-            "d": "Hospitalized frat-boy"
-        }
+        "title": "Grootzand 21",
+        "information": {
+            "woonoppervlakte": "287",
+            "slaapkamers": "5",
+            "omschrijving": "Op magnifieke locatie gelegen, vrijstaand landhuis met riante orangerie, schitterende tuin met buitenplaats met gedeeltelijk overdekt terras, oprit met carport en eigen bunker. Deze met riet gedekte vrijstaande villa is gelegen aan de rand van het bos en op heel korte afstand van het prachtige duingebied, strand en zee."
+        },
+        "images" : [
+            {"original":"https://cloud.funda.nl/valentina_media/139/174/226_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/139/174/226_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/139/174/230_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/139/174/230_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/139/174/231_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/139/174/231_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/139/174/236_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/139/174/236_720x480.jpg"}
+        ],
+        "price" : "1795000"
     },
     {
-        "Title": "What is love?",
-        "Information": {
-            "a": "Baby",
-            "b": "Dont",
-            "c": "Hurt",
-            "d": "Me"
-        }
-    },
-    {
-        "Title": "666",
-        "Information": {
-            "a": "Authorized clientelle",
-            "b": "Disgusted Cucumber",
-            "c": "Everymans work",
-            "d": "Aquaducts on the moon"
-        }
+        "title": "de Stouwe 4 A",
+        "information": {
+            "woonoppervlakte" : "159",
+            "slaapkamers" : "5",
+            "omschrijving" : "Het betreft hier een paardenbedrijf dat op een mooie en landelijke locatie tussen Zwolle en Ommen gelegen is. Door de degelijke bouw en ruime opzet is het bedrijf uitstekend geschikt voor de professionele paardenhouder,"
+        },
+        "images" : [
+            {"original":"https://cloud.funda.nl/valentina_media/140/161/016_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/161/016_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/161/000_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/161/000_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/160/940_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/160/940_720x480.jpg"},
+
+            {"original":"https://cloud.funda.nl/valentina_media/140/160/929_720x480.jpg",
+            "thumbnail":"https://cloud.funda.nl/valentina_media/140/160/929_720x480.jpg"}
+        ],
+        "price" : "5000000"
     }
 ]

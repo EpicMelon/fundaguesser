@@ -120,6 +120,8 @@ body {
 }
 
 .error:hover {
-    border: 5=1px #290c06 solid;
+    border: 5px #290c06 solid;
     background-color: rgb(158, 23, 23);
 }
+
+@import "~react-image-gallery/styles/css/image-gallery.css";

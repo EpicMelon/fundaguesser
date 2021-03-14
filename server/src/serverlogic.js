@@ -206,11 +206,11 @@ function myGameDataRequest(socket) {
 }
 
 function requestGameState(socket) {
-    var started = game.data[socket.roomId].inProgress;
-    var leader = game.data[socket.roomId].playersData[socket.id].leader;
+    socket.emit("updateLeader", game.data[socket.roomId].playersData[socket.id].leader);
 
-    var state = {started: started, leader: leader};
-    socket.emit("updateGameState", state);
+    if (game.data[socket.roomId].inProgress) {
+        game.data[socket.roomId].emitCurrentHouse(socket);
+    }
 }
 
 
