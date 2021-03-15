@@ -35,8 +35,7 @@ function UserList() {
     }, [socket, updateList]);
 
     return (
-        <div>
-            Users online:
+        <div className="userListDiv">
             <ul>
             {Object.keys(players).map((id, i) => (
                 <li key={i}>

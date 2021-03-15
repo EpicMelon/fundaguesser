@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 
 import { useForm } from "react-hook-form";
 
@@ -6,24 +6,39 @@ function Input({currentGuess, makeGuess}) {
     const { register, handleSubmit, watch, errors, reset } = useForm();
 
     const submit = useCallback((form) => {
-        makeGuess(form.amount);
 
         reset();
     })
 
-    return (
-        <div>
-            <p> Current Guess: {currentGuess}</p>
+    const [test, setTest] = useState(0);
 
-            <form onSubmit={handleSubmit(submit)}>
-                <div className="bigWriteDiv">
-                    <input name="amount" ref={
-                        register({required: true, minLength: 1})}
-                    placeholder={"100 000"} type="number" autoComplete="off"
-                    className=""/>
-                    <input type="submit" value="Submit Guess" className="blueButton bigWriteButton"/>
-                </div>
-            </form>
+    function handleChange(event) {
+        var amount = event.target.value * 1000;
+
+        makeGuess(amount);
+    };
+
+    const DEFAULT_GUESS = 1100;
+
+    useEffect(() => {
+        makeGuess(DEFAULT_GUESS * 1000)
+        return () => {
+            
+        }
+    }, [])
+
+    return (
+        <div className="inputDiv">
+            <p className="inputGuess"><b>{currentGuess}</b></p>
+
+            <input 
+                id="typeinp"
+                type="range" 
+                min="1" max="2200"
+                onChange={handleChange}
+                step="1"
+                defaultValue={DEFAULT_GUESS}
+                className="inputSlider"/>
         </div>
     )
 }

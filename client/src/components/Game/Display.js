@@ -23,7 +23,6 @@ function Display({house}) {
     })
     return (
         <div>
-            <div><ImageGallery items={house.images} /></div>
             <div>
                 {house.title}
                 {<ul>
@@ -34,6 +33,7 @@ function Display({house}) {
                 ))}
                 </ul>}
             </div>
+            <div><ImageGallery items={house.images} /></div>
         </div>
     )
 }

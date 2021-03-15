@@ -15,7 +15,7 @@ function SetName({ onNameSubmission }) {
                             )}
                     placeholder={"Your Name"} type="text" maxLength={MAX_NAME_LENGTH} autoComplete="off"
                     className="whiteWrite setNameWrite"/>
-                    <input type="submit" value="Play"  className="blueButton bigWriteButton"/>
+                    <input type="submit" value="Play"  className="blueButton setNameButton"/>
                 </div>
             </form>
         </div>

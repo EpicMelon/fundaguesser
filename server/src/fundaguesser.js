@@ -141,7 +141,7 @@ class GameRoom {
         }
 
         // cosmetic
-        io.to(this.id).emit("showScore", "scores are in bitches");
+        io.to(this.id).emit('updatePlayerList', this.playersData);
     }
 
     emitCurrentHouse(socket) {

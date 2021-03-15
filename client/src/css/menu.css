@@ -1,0 +1,32 @@
+.bigLogo {
+    font-size: 90px;
+    width: 700px;
+    margin: 5% auto 5% auto;
+}
+
+.bigButton {
+    font-size: 60px;
+    display: block;
+    margin: 0% auto;
+}
+
+.joinDiv {
+    display: block;
+    width: max-content;
+    margin: 4% auto;
+}
+
+.joinWrite {
+    font-size: 30px;
+    width: 40px;
+}
+
+.joinButton {
+    font-size: 30px;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}

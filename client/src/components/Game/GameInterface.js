@@ -9,6 +9,12 @@ import Result from './Result';
 
 import {SocketContext, socket} from '../../context/socket';
 
+function euroFormat(amount) {
+    var dotted = amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+    return "€" + dotted + ",-"
+}
+
 function GameInterface() {
     const socket = useContext(SocketContext);
 
@@ -62,13 +68,13 @@ function GameInterface() {
     })
 
     // --- GAME ---
-    const [currentGuess, setCurrentGuess] = useState(0);
+    const [currentGuess, setCurrentGuess] = useState("0");
 
     const makeGuess = useCallback((amount) => {
         socket.emit("guess", amount);
-        setCurrentGuess(amount);
-    })
 
+        setCurrentGuess(euroFormat(amount));
+    })
 
     // --- RESULTS ---
     const [resultData, setResultData] = useState({});
@@ -105,19 +111,20 @@ function GameInterface() {
 
     if (started) {
         return (
-            <div>
-                {resultScreen ? (<Result results={resultData} myId={socket.id}/>) : ""}
+            <div className="gameDiv">
                 <Timer deadline={roundData.timer}/>
-                <Input currentGuess={currentGuess} makeGuess={makeGuess}/>
+                
                 {roundData.house ? <Display house={roundData.house}/> : "Could not load house"}
+                {resultScreen ? (<Result results={resultData} myId={socket.id}/>) : ""}
+                {!resultScreen ? (<Input currentGuess={currentGuess} makeGuess={makeGuess}/>) : ""}
             </div>
         )
     }
 
     if (ended) {
         return (
-            <div>
-                <Result results={resultData} myId={socket.id}/>
+            <div className="gameDiv">
+                Somebody won!
                 {leader ? (
                     <button className="blueButton bigButton" onClick={startGame}> Start New Game! </button>
                 ) : (
@@ -128,11 +135,11 @@ function GameInterface() {
     }
 
     return (
-        <div>
+        <div className="gameDiv">
             {leader ? (
-                <button className="blueButton bigButton" onClick={startGame}> Start Game </button>
+                <button className="blueButton bigButton startButton" onClick={startGame}> Start Game </button>
             ) : (
-                <h2> Wait for the lobby leader to start the game..</h2>
+                <h2 className="wait"> Wait for the lobby leader to start the game..</h2>
             )}
         </div>
     )

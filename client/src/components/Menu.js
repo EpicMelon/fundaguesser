@@ -7,6 +7,7 @@ import CreateGame from './Menu/CreateGame';
 import JoinGame from './Menu/JoinGame';
 
 import '../css/base.css';
+import '../css/menu.css';
 
 const Menu = () => {
     const location = useLocation();
@@ -35,8 +36,8 @@ const Menu = () => {
                     <Logo/>
                 </div>
                 <div>
-                    <div> <CreateGame/> </div>
-                    <div style={{margin: "auto"}}> <JoinGame /> </div>
+                    <div className="createDiv"> <CreateGame/> </div>
+                    <div className="joinDiv"> <JoinGame /> </div>
                     
                 </div>
                 {error ? (<div className="error"> Error: {error} </div>) : (<div></div>)}

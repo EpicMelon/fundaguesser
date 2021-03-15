@@ -1,6 +1,8 @@
 // Our files
 const serverLogic = require('./serverlogic.js');
 
+var path = require('path');
+
 // initializing express-session middleware
 var Session = require('express-session');
 var SessionStore = require('session-file-store')(Session);
@@ -10,7 +12,7 @@ var session = Session({store: new SessionStore({path: __dirname+'/tmp/sessions'}
 var express = require('express');
 var app = express();
 
-app.use(express.static('public'));
+app.use(express.static(path.resolve('../client/build')));
 
 // var favicon = require('serve-favicon');
 // app.use(favicon('public/images/favicon.ico'));
@@ -18,12 +20,8 @@ app.use(express.static('public'));
 app.use(session);
 
 // Pages
-app.get('', (req, res) => {
-  res.sendFile('public/html/index.html', {root:'./'});
-});
-
-app.get('/room/([0-9]+)$', (req, res) => {
-  res.sendFile('public/html/room.html', {root:'./'});
+app.get('/*', (req, res) => {
+  res.sendFile(path.resolve('../client/build/index.html'));
 });
 
 // Attach express app to server

@@ -1,0 +1,311 @@
+.setNameDiv {
+    display: block;
+    width: max-content;
+    margin: 4% auto;
+}
+
+.setNameWrite {
+    font-size: 30px;
+    width: 300px;
+}
+
+.setNameButton {
+    font-size: 30px;
+}
+
+/* Structure */
+
+.chatDiv {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 340px;
+    height: 340px;
+    background-color: antiquewhite;
+}
+
+.gameDiv {
+    position: relative;
+    display: block;
+    width: 800px;
+    margin: 0px auto;
+    min-height: 1000px;
+    background-color: rgba(255, 196, 168, 0.534);
+}
+
+.userListDiv {
+    position: absolute;
+    left: 120px;
+    top: 100px;
+    display: block;
+    width: 240px;
+    height: max-content;
+    background-color: antiquewhite;
+}
+
+/* Title etc */
+
+.welcome {
+    margin: 1% auto 1% auto;
+    display: block;
+    width: max-content;
+}
+
+.welcomeText {
+    margin: 0%;
+}
+
+.leaveDiv {
+    margin: 0%;
+    display: inline-block;
+    width: max-content;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.leaveButton {
+    background-color: brown;
+    padding: 0.5rem;
+}
+
+.leaveButton:hover {
+    background-color: darkred;
+}
+
+/* Chat */
+
+.messages {
+    overflow-y:scroll;
+    overflow: hidden;
+    height: 280px;
+
+    list-style-type: none;
+    overflow-wrap: break-word;
+}
+
+.messages ul {
+    padding: 0;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.messages li {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px;
+}
+
+.messages li:nth-child(2n) {
+    background-color: rgb(253, 243, 229);
+}
+
+.sendDiv {
+    position: absolute;
+    bottom: 0px;
+    height: 54px;
+    width: 100%;
+    display: block;
+}
+
+.sendForm {
+    width: 95%;
+    display: block;
+    margin: auto;
+}
+
+.msgWrite {
+    width: 80%;
+    padding: 4px;
+    height: 34px;
+    font-size: 16px;
+    overflow: hidden;
+    float:left;
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.msgButton {
+    padding: 8px;
+    font-size: 16px;
+    height: 42px;
+    float:left;
+}
+
+/* UserList */
+
+.userListDiv {
+    overflow-y:scroll;
+    overflow: hidden;
+
+    list-style-type: none;
+    overflow-wrap: break-word;
+}
+
+.userListDiv ul {
+    padding: 0;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.userListDiv li {
+    height: auto;
+}
+
+.userListDiv li:nth-child(2n) {
+    background-color: rgb(253, 243, 229);
+}
+
+.userListDiv .entry {
+    display: block;
+    height: 50px;
+    clear: left;
+    padding: 25px 0px;
+}
+
+.userListDiv .placing {
+    font-size: 24px;
+    text-align: right;
+    float: left;
+    display: block;
+    margin: auto;
+    margin-left: 25px;
+}
+
+.userListDiv .username {
+    margin-left: 25px;
+    font-size: 24px;
+    float: left;
+}
+.userListDiv .points {
+    margin-left: 75px;
+    float: left;
+    clear: left;
+}
+.userListDiv .deltaPoints {
+    float: left;
+    color: green;
+    margin-left: 20px;
+}
+
+
+/* Game !!! */
+.startButton {
+    top: 100px;
+    position: relative;
+}
+
+.wait {
+    top: 100px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.results {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.69);
+    color: white;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.results .correctLabel {
+    margin: 0px;
+    margin-top: 50px;
+
+    animation: fadeIn ease 2.5s;
+}
+
+.results .correctPrice {
+    color: gold;
+    font-size: 100px;
+    text-shadow: 4px 4px #000000;
+    margin: 0px;
+    margin-bottom: 50px;
+
+    animation: fadeIn ease 2.5s;
+}
+
+.results ul {
+    padding: 0;
+    list-style-type: none;
+    animation: fadeIn ease 1.6s;
+}
+
+.results .yourAnswer {
+    font-size: 40px;
+    margin-bottom: 90px;
+    animation: fadeIn ease 1s;
+}
+
+.results .guess {
+    font-size: 45px;
+    color: lightgreen;
+}
+
+.results .deltaPoints {
+    font-size: 35px;
+    color: lime;
+    animation: fadeIn ease 4s;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.inputDiv {
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(17, 17, 17, 0.527);
+    padding: 20px 0px;
+    z-index: 0;
+}
+
+.inputGuess {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin: 0px auto;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    width: max-content;
+    padding: 0px 25px;
+}
+
+.inputSlider {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.inputSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  background: #53241B;
+  cursor: pointer;
+  border: 2px white solid;
+}
+.inputSlider::-moz-range-thumb {
+  width: 45px;
+  height: 45px;
+  background: #53241B;
+  cursor: pointer;
+  border: 2px #60C5F8 solid;
+}

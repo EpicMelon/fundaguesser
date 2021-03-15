@@ -13,6 +13,8 @@ import ChatRoom from './Game/ChatRoom';
 import GameInterface from './Game/GameInterface';
 
 import '../css/base.css';
+import '../css/menu.css';
+import '../css/game.css';
 
 const Game = () => {
     let { roomId } = useParams();
@@ -64,14 +66,15 @@ const Game = () => {
             {joined ? (
                 <div>
                     <LeaveGame />
-                    <h1> Welcome to Room {roomId} </h1>
+                    <div className="welcome"> <h1 className="welcomeText"> You are in lobby {roomId} </h1> </div>
+                    <GameInterface />
                     <UserList />
                     <ChatRoom />
-                    <GameInterface />
                 </div>
                 ) : (
                 <div>
                     <Logo/>
+                    <div className="welcome"> <h1 className="welcomeText"> Lobby {roomId} </h1> </div>
                     <SetName onNameSubmission={setNameAndJoin}/>
                 </div>)
             }

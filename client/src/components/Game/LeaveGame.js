@@ -14,8 +14,8 @@ function LeaveGame() {
     }, []);
 
     return (
-        <div>
-            <button onClick={leaveGame}>
+        <div className="leaveDiv">
+            <button className="blueButton leaveButton" onClick={leaveGame}>
                 Leave Game
             </button>
         </div>

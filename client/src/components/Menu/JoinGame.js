@@ -40,13 +40,13 @@ function JoinGame() {
 
     return (
         <form onSubmit={handleSubmit(joinGameRequest)}>
-            <div className="bigWriteDiv">
+            <div>
                 <input name="inputId" ref={
                     register({required: true, minLength: ID_SIZE, maxLength: ID_SIZE}
                         )}
                 placeholder={"0".repeat(ID_SIZE)} type="text" maxLength={ID_SIZE} autoComplete="off"
-                className="whiteWrite bigWrite"/>
-                <input type="submit" value="Join Game" className="blueButton bigWriteButton"/>
+                className="whiteWrite joinWrite"/>
+                <input type="submit" value="Join Game" className="blueButton joinButton"/>
             </div>
         </form>
     )
