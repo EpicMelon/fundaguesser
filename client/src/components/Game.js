@@ -67,9 +67,9 @@ const Game = () => {
                 <div>
                     <LeaveGame />
                     <div className="welcome"> <h1 className="welcomeText"> You are in lobby {roomId} </h1> </div>
-                    <GameInterface />
                     <UserList />
                     <ChatRoom />
+                    <GameInterface />
                 </div>
                 ) : (
                 <div>

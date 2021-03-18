@@ -8,7 +8,7 @@ function LeaveGame() {
     const history = useHistory();
 
     // confirmed
-    const leaveGame = useCallback((id) => {
+    const leaveGame = useCallback(() => {
         socket.emit("leaveRoom")
         history.push("/");
     }, []);

@@ -1,13 +1,30 @@
+/* Logo */
+
 .bigLogo {
-    font-size: 90px;
-    width: 700px;
+    font-size: 20px;
+    width: 150px;
     margin: 5% auto 5% auto;
 }
 
+@media screen and (min-width: 350px) {
+    .bigLogo {
+        font-size: 40px;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .bigLogo {
+        font-size: 80px;
+        width: 700px;
+    }
+}
+/* Buttons */
+
 .bigButton {
-    font-size: 60px;
+    font-size: 20px;
     display: block;
-    margin: 0% auto;
+    margin: 40px auto;
 }
 
 .joinDiv {
@@ -17,16 +34,53 @@
 }
 
 .joinWrite {
-    font-size: 30px;
-    width: 40px;
+    font-size: 20px;
+    width: 25px;
+    padding: 18px;
 }
 
 .joinButton {
-    font-size: 30px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 350px) {
+    .bigButton {
+        font-size: 40px;
+        margin: 40px auto;
+    }
+    
+    .joinDiv {
+        margin: 4% auto;
+    }
+    
+    .joinWrite {
+        font-size: 20px;
+        width: 25px;
+        padding: 18px;
+    }
+    
+    .joinButton {
+        font-size: 20px;
+    }
 }
 
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+@media screen and (min-width: 800px) {
+    .bigButton {
+        font-size: 60px;
+        margin: 0% auto;
+    }
+    
+    .joinDiv {
+        margin: 4% auto;
+    }
+    
+    .joinWrite {
+        font-size: 30px;
+        width: 40px;
+    }
+    
+    .joinButton {
+        font-size: 30px;
+    }
 }
