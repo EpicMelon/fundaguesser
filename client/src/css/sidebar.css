@@ -28,8 +28,6 @@
     position: relative;
 
     width: 340px;
-    height: calc(max-content + 54px);
-    max-height: 340px;
 
     background-color: antiquewhite;
     
