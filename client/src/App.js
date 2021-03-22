@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Game from "./components/Game";
+import Room from "./components/Room";
 import Menu from "./components/Menu";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Menu} />
-          <Route exact path="/:roomId" component={Game} />
+          <Route exact path="/:roomId" component={Room} />
         </Switch>
       </Router>
   );

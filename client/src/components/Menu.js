@@ -31,10 +31,12 @@ const Menu = () => {
     return (
         <SocketContext.Provider value={socket}>
             <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
-            <div className="Menu">
-                <div>
-                    <Logo/>
-                </div>
+
+            <div>
+                <Logo/>
+            </div>
+
+            <div className="menu">
                 <div>
                     <div className="createDiv"> <CreateGame/> </div>
                     <div className="joinDiv"> <JoinGame /> </div>

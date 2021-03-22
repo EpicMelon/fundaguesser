@@ -1,5 +1,12 @@
 /* Logo */
 
+.menu {
+    background-color: #F7A100;
+    width: 100%;
+    padding: 30px 0px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
+}
+
 .bigLogo {
     font-size: 20px;
     width: 150px;
@@ -16,21 +23,23 @@
 @media screen and (min-width: 800px) {
     .bigLogo {
         font-size: 80px;
-        width: 700px;
+        width: 600px;
     }
 }
+
 /* Buttons */
 
 .bigButton {
     font-size: 20px;
     display: block;
-    margin: 40px auto;
+    margin: 0px auto;
 }
 
 .joinDiv {
     display: block;
     width: max-content;
-    margin: 4% auto;
+        margin: 0% auto;
+        margin-top: 1%;
 }
 
 .joinWrite {
@@ -46,11 +55,12 @@
 @media screen and (min-width: 350px) {
     .bigButton {
         font-size: 40px;
-        margin: 40px auto;
+        margin: 0px auto;
     }
     
     .joinDiv {
-        margin: 4% auto;
+        margin: 0% auto;
+        margin-top: 1%;
     }
     
     .joinWrite {
@@ -67,12 +77,13 @@
 
 @media screen and (min-width: 800px) {
     .bigButton {
-        font-size: 60px;
+        font-size: 50px;
         margin: 0% auto;
     }
     
     .joinDiv {
-        margin: 4% auto;
+        margin: 0% auto;
+        margin-top: 1%;
     }
     
     .joinWrite {

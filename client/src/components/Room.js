@@ -5,18 +5,19 @@ import {SocketContext, socket} from '../context/socket';
 
 import Logo from './Menu/Logo';
 
-import SetName from './Game/SetName';
-import LeaveGame from './Game/LeaveGame';
-import UserList from './Game/UserList';
-import ChatRoom from './Game/ChatRoom';
+import SetName from './Room/SetName';
+import LeaveGame from './Room/LeaveGame';
+import UserList from './Room/UserList';
+import ChatRoom from './Room/ChatRoom';
 
-import GameInterface from './Game/GameInterface';
+import GameInterface from './Room/GameInterface';
 
 import '../css/base.css';
 import '../css/menu.css';
-import '../css/game.css';
+import '../css/room.css';
+import '../css/sidebar.css';
 
-const Game = () => {
+const Room = () => {
     let { roomId } = useParams();
     const history = useHistory();
 
@@ -43,6 +44,10 @@ const Game = () => {
         history.push({pathname: "/", state:{error:msg}});
     }, []);
 
+    const [sidebarActive, setsidebarActive] = useState(true);
+
+    const toggleSidebar = () => setsidebarActive(!sidebarActive);
+    
     // Set up
     useEffect(() => {
         // subscribe to socket events
@@ -51,6 +56,11 @@ const Game = () => {
     
         // Ask if allowed into the game
         socket.emit("checkIfAllowed", roomId);
+
+        // Mobile has sidebar default hidden
+        if (window.innerWidth < 450) {
+            setsidebarActive(false);
+        }
         
         return () => {
           // before the component is destroyed
@@ -60,26 +70,37 @@ const Game = () => {
         };
     }, [socket, joinGameConfirmed, joinGameDenied]);
 
+
     return (
         <SocketContext.Provider value={socket}>
         <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
                 <div>
-                    <LeaveGame />
-                    <div className="welcome"> <h1 className="welcomeText"> You are in lobby {roomId} </h1> </div>
-                    <UserList />
-                    <ChatRoom />
-                    <GameInterface />
+                    <div className="show" onClick={toggleSidebar}> Chat {">"} </div>
+
+                    <div className={sidebarActive ? "sideBar active" : "sideBar"}>
+                        <p className="hide" onClick={toggleSidebar}> {"<"} Collapse </p>
+                        <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
+                        <div className="linkDiv"> <h1 className="link"> https://fundaguesser.nl/{roomId} </h1> </div>
+                        <ChatRoom />
+                        <UserList />
+                        <LeaveGame />
+                    </div>
+
+                    <GameInterface sidebar={sidebarActive}/>
                 </div>
                 ) : (
                 <div>
                     <Logo/>
-                    <div className="welcome"> <h1 className="welcomeText"> Lobby {roomId} </h1> </div>
-                    <SetName onNameSubmission={setNameAndJoin}/>
+
+                    <div className="menu">
+                        <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
+                        <SetName onNameSubmission={setNameAndJoin}/>
+                    </div>
                 </div>)
             }
         </SocketContext.Provider>
     );
 }
 
-export default Game;
+export default Room;

@@ -15,7 +15,7 @@ function euroFormat(amount) {
     return "€" + dotted + ",-"
 }
 
-function GameInterface() {
+function GameInterface({sidebar}) {
     const socket = useContext(SocketContext);
 
     // --- PREGAME ---
@@ -111,7 +111,7 @@ function GameInterface() {
 
     if (started) {
         return (
-            <div className="gameDiv">
+            <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
                 <Timer deadline={roundData.timer}/>
                 
                 {roundData.house ? <Display house={roundData.house}/> : "Could not load house"}
@@ -123,7 +123,7 @@ function GameInterface() {
 
     if (ended) {
         return (
-            <div className="gameDiv">
+            <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
                 Somebody won!
                 {leader ? (
                     <button className="blueButton bigButton" onClick={startGame}> Start New Game! </button>
@@ -135,7 +135,7 @@ function GameInterface() {
     }
 
     return (
-        <div className="gameDiv">
+        <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
             {leader ? (
                 <button className="blueButton bigButton startButton" onClick={startGame}> Start Game </button>
             ) : (

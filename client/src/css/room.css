@@ -1,0 +1,173 @@
+/* Set Name First */
+
+.setNameDiv {
+    display: block;
+    width: max-content;
+    margin: 0% auto;
+    margin-top: 1%;
+}
+
+.setNameWrite {
+    font-size: 20px;
+    width: 150px;
+    padding: 17px;
+}
+
+.setNameButton {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 800px) {
+    .setNameDiv {
+        margin: 0% auto;
+        margin-top: 1%;
+    }
+    
+    .setNameWrite {
+        font-size: 30px;
+        width: 300px;
+        padding: 17px;
+    }
+    
+    .setNameButton {
+        font-size: 30px;
+    }
+}
+
+/* Game */
+
+.gameDiv {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    
+    margin: 0px auto;
+    float: right;
+}
+
+.gameDiv.sidebarActive {
+    width: calc(100% - 360px);
+}
+
+
+/* Game !!! */
+.startButton {
+    top: 100px;
+    position: relative;
+}
+
+.wait {
+    top: 100px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.results {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.69);
+    color: white;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.results .correctLabel {
+    margin: 0px;
+    margin-top: 50px;
+
+    animation: fadeIn ease 2.5s;
+}
+
+.results .correctPrice {
+    color: gold;
+    font-size: 100px;
+    text-shadow: 4px 4px #000000;
+    margin: 0px;
+    margin-bottom: 50px;
+
+    animation: fadeIn ease 2.5s;
+}
+
+.results ul {
+    padding: 0;
+    list-style-type: none;
+    animation: fadeIn ease 1.6s;
+}
+
+.results .yourAnswer {
+    font-size: 40px;
+    margin-bottom: 90px;
+    animation: fadeIn ease 1s;
+}
+
+.results .guess {
+    font-size: 45px;
+    color: lightgreen;
+}
+
+.results .deltaPoints {
+    font-size: 35px;
+    color: lime;
+    animation: fadeIn ease 4s;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.inputDiv {
+    display: block;
+    width: inherit;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(17, 17, 17, 0.527);
+    padding: 20px 0px;
+    z-index: 0;
+}
+
+.inputGuess {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin: 0px auto;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    width: max-content;
+    padding: 0px 25px;
+}
+
+.inputSlider {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.inputSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  background: #53241B;
+  cursor: pointer;
+  border: 2px white solid;
+}
+.inputSlider::-moz-range-thumb {
+  width: 45px;
+  height: 45px;
+  background: #53241B;
+  cursor: pointer;
+  border: 2px #60C5F8 solid;
+}

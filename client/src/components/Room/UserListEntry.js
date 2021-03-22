@@ -9,7 +9,7 @@ function UserListEntry({userData}) {
                 <b className="username">{userData.username}</b>
                 {userData.leader ? ("*") : ("")}
                 <span className="points"> {userData.points.toFixed(0)} points</span>
-                {userData.deltaPoints ? (<span className="deltaPoints">(+{userData.deltaPoints.toFixed(0)}!)</span>) : ("")}
+                {/* {userData.deltaPoints ? (<span className="deltaPoints">(+{userData.deltaPoints.toFixed(0)}!)</span>) : ("")} */}
             </div>
         </div>
     )

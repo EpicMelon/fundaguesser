@@ -1,4 +1,10 @@
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0px;
+    display: border;
     font-family: 'proxima-nova', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -6,6 +12,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     background-color: #F7A100;
+
+    height: 100%;
+    background: linear-gradient(180deg,#e6f2f7 0%,#e6f2f7 50%,#fff 90%);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(rgb(230, 242, 247) 0px, rgb(230, 242, 247) 50%, rgb(255, 255, 255) 90%);
 }
 
 /* Logo */
@@ -15,6 +26,7 @@ body {
     border: 5px #60C5F8 solid;
     background-color:#53241B;
     text-align: center;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
 }
 
 /* Buttons */
