@@ -18,22 +18,20 @@ const images = [
 
 function Display({house}) {
     useEffect(() => {
-        console.log("Display received object:");
-        console.dir(house.images);
     })
     return (
         <div>
             <div>
                 {house.title}
-                {<ul>
+                {/* {<ul>
                 {Object.keys(house.information).map((id, i) => (
                     <li key={i}>
                         {id}: {house.information[id]}
                     </li>
                 ))}
-                </ul>}
+                </ul>} */}
             </div>
-            <div><ImageGallery items={house.images} /></div>
+            {/* <div><ImageGallery items={house.images} /></div> */}
         </div>
     )
 }

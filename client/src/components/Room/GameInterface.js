@@ -59,12 +59,23 @@ function GameInterface({sidebar}) {
         makeGuess(0);
     }, []);
 
+    const [winners, setWinners] = useState([]);
     const endGame = useCallback((data) => {
         setStarted(false);
         setEnded(true);
-        console.log("ENDING GAME! !!! ");
+        console.log("ENDING GAME! !!! GOT DATA:");
+
+        // Determine winner
+        console.dir(data)
 
         // we could show big end screen or something
+        var win = [];
+        for (const [key, value] of Object.entries(data)) {
+            if (data[key].place == 1) {
+                win.push(data[key].username);
+            }
+        }
+        setWinners(win);
     })
 
     // --- GAME ---
@@ -124,7 +135,7 @@ function GameInterface({sidebar}) {
     if (ended) {
         return (
             <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
-                Somebody won!
+                {winners.length == 1 ? winners[0] + "won!" : winners.map((value) => (value + ", ")) + "won!"}
                 {leader ? (
                     <button className="blueButton bigButton" onClick={startGame}> Start New Game! </button>
                 ) : (

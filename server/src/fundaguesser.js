@@ -7,19 +7,16 @@
 MAX_PLAYERS = 8
 DEFAULT_GUESS = 0
 
-ROUND_TIME = 60000;
-RESULT_TIME = 12000;
+ROUND_TIME = 6000;
+RESULT_TIME = 6000;
 
 HOUSE_COUNT = 5; // PLACEHOLDER
 
 
 // Data management
-var fs = require('fs');
-var housedata = fs.readFileSync('src/houses.json', 'utf8');
-var houses = JSON.parse(housedata);
+const houseProvider = require('./houseprovider.js');
 
 // Game management
-
 function pointGraph(guess, correct) {
     var percWrong = Math.abs(guess - correct) / correct * 100;
     var points = Math.max(100 - percWrong, 0);
@@ -37,6 +34,9 @@ class PlayerData {
         this.points = 0;
         this.deltaPoints = 0;
         this.leader = false;
+        this.place = 0;
+
+        this.index = 0;
     }
 }
 
@@ -50,7 +50,13 @@ class GameRoom {
         this.inProgress = false;
         this.roundTime = ROUND_TIME;
 
-        this.playersData = {}
+        this.playersData = {};
+
+        this.roundLength = 3;
+        this.cities = ['amsterdam', 'zwolle'];
+
+        this.housesDone = []; 
+        this.houseDataOfRound;
 
         this.currentDeadLine;
         this.currentTimeout;
@@ -80,6 +86,9 @@ class GameRoom {
         // add to list
         this.players.push(socketId);
 
+        // update placings
+        this.setPlacings();
+
         // cosmetic
         io.to(this.id).emit('showMessage', this.playersData[socketId].username + " joined!");
         io.to(this.id).emit('updatePlayerList', this.playersData);
@@ -106,23 +115,51 @@ class GameRoom {
 
         delete this.playersData[socketId];
 
+        // update placings
+        this.setPlacings();
+
         // cosmetic
         io.to(this.id).emit('showMessage', username + " left!");
         io.to(this.id).emit('updatePlayerList', this.playersData);
-        console.log("[Room " + this.id + "] " + username + " left");   
+        console.log("[Room " + this.id + "] " + username + " left");
     }
 
     aboutToStart() {
         this.inProgress = true;
 
+        this.resetPoints();
+
+        this.houseDataOfRound = houseProvider.getHouses(this.roundLength, this.cities, this.housesDone);
+
         // choose houses or something
-        this.currentHouse = 0; // place holder is just an integer LOL
+        this.currentHouse = 0; // index of round
     }
 
     end() {
         this.inProgress = false;
 
-        io.to(this.id).emit('endGame');
+        io.to(this.id).emit('endGame', this.playersData);
+    }
+
+    setPlacings() {
+        for (const [key, value] of Object.entries(this.playersData)) {
+            // count how many have more points
+            var count = 0;
+            for (const [key2, value2] of Object.entries(this.playersData)) {
+                if (this.playersData[key2].points > this.playersData[key].points) {
+                    count++;
+                }
+            }
+            this.playersData[key].place = 1 + count;
+        }
+    }
+
+    resetPoints() {
+        for (const [key, value] of Object.entries(this.playersData)) {
+            this.playersData[key].points = 0;
+        }
+
+        this.setPlacings();
     }
 
     resetGuesses() {
@@ -140,12 +177,21 @@ class GameRoom {
             console.log("[Room " + this.id + "] " + value.username + " now has " + value.points + " points! (" + "+" + value.deltaPoints + ")");
         }
 
+        this.setPlacings();
+
         // cosmetic
         io.to(this.id).emit('updatePlayerList', this.playersData);
     }
 
     emitCurrentHouse(socket) {
-        var roundData = {house : houses[this.currentHouse],
+        console.log("About to emit, i have as data:");
+        console.dir(this.houseDataOfRound);
+
+        // temporarily remove price from house when emitting (this can be done better, temp solution)
+        var price = this.houseDataOfRound[this.currentHouse].price;
+        delete this.houseDataOfRound[this.currentHouse].price;
+
+        var roundData = {house : this.houseDataOfRound[this.currentHouse],
             timer : this.currentDeadLine}
 
         if (socket) {
@@ -154,6 +200,9 @@ class GameRoom {
         else {
             io.to(this.id).emit('startRound', roundData);
         }
+
+        // put price back
+        this.houseDataOfRound[this.currentHouse].price = price;
     }
 }
 
@@ -209,7 +258,12 @@ function startGame(socket) {
 
 
 function startRound(roomId) {
-    if (data[roomId].currentHouse >= houses.length) {
+
+    console.log("hey starting round... with data:");
+    console.dir(data[roomId].houseDataOfRound);
+
+
+    if (data[roomId].currentHouse >= data[roomId].houseDataOfRound.length) {
         data[roomId].end();
         return;
     }
@@ -223,7 +277,7 @@ function startRound(roomId) {
 }
 
 function endRound(roomId) {
-    var correctAmount = houses[data[roomId].currentHouse].price;
+    var correctAmount = data[roomId].houseDataOfRound[data[roomId].currentHouse].price;
 
     data[roomId].evaluateGuesses(correctAmount);
     data[roomId].currentHouse++;

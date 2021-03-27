@@ -20,7 +20,7 @@ function Timer({deadline}) {
     useEffect(() => {
         var timeout = setInterval(() => {
             setTime(calculateTime());
-        }, 100);
+        }, 10);
         
         return () => {
             clearInterval(timeout);
@@ -28,8 +28,10 @@ function Timer({deadline}) {
     })
 
     return (
-        <div>
-            {time}
+        <div className="timerDiv">
+            <div className="timer" style={{width: time / 6 * 100 + "%"}}>
+                {time}
+            </div>
         </div>
     )
 }

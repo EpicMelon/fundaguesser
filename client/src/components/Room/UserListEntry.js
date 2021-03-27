@@ -1,10 +1,9 @@
 import React, {useState, useContext, useCallback, useEffect} from 'react';
 
 function UserListEntry({userData}) {
-    useEffect(() => {console.dir(userData)})
     return (
         <div className="entry">
-            <span className="placing">#1</span>
+            <span className="placing">{userData.place==0 ? "" : "#"+userData.place }</span>
             <div className="info">
                 <b className="username">{userData.username}</b>
                 {userData.leader ? ("*") : ("")}

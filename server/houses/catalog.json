@@ -1,0 +1,22 @@
+{
+    "amsterdam" : [
+        {
+            "id" : "0",
+            "path" : "amsterdam/example-house-0.json"
+        },
+        {
+            "id" : "1",
+            "path" : "amsterdam/example-house-1.json"
+        }
+    ],
+    "zwolle" : [
+        {
+            "id" : "2",
+            "path" : "zwolle/example-house-2.json"
+        },
+        {
+            "id" : "4",
+            "path" : "zwolle/example-house-3.json"
+        }
+    ]
+}
