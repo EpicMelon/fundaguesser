@@ -1,23 +1,33 @@
 import React, {useState, useContext, useCallback, useEffect} from 'react';
 import ImageGallery from 'react-image-gallery';
 
+import '../../css/display.css';
+
 function Display({house}) {
     useEffect(() => {
+      console.log("Showing house:");
+      console.dir(house);
     })
 
     return (
-        <div>
-            <div>
-                {/* {<h1>{house["Buitenruimte"]["ligging"]}</h1>}
-                <ul>
-                  {Object.keys(house["Oppervlakte en inhoud"]).map((id, i) => (
-                      <li key={i}>
-                          {id}: {house["Oppervlakte en inhoud"][id]}
-                      </li>
-                  ))}
-                </ul> */}
-            </div>
-            {<div><ImageGallery items={house.images} /></div>}
+        <div className="display">
+          <div className="title">
+            <h1>{house["Buitenruimte"]["Ligging"]}</h1>
+          </div>
+
+          <div className="properties">
+            <ul>
+              {Object.keys(house["Oppervlakten en inhoud"]).map((id, i) => (
+                  <li key={i}>
+                      {id}: {house["Oppervlakten en inhoud"][id]}
+                  </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="images">
+            <ImageGallery items={house.images} />
+          </div>
         </div>
     )
 }

@@ -9,7 +9,7 @@ function Timer({deadline}) {
 
         var seconds = milliseconds / 1000;
 
-        var showTime = seconds.toFixed(1);
+        var showTime = seconds.toFixed();
 
         if (seconds > 0)
             return showTime;
