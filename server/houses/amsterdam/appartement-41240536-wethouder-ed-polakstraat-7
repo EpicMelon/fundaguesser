@@ -1,0 +1,153 @@
+{
+    "Overdracht": {
+        "Aangeboden sinds": "2 weken",
+        "Status": "Beschikbaar",
+        "Aanvaarding": "Per direct beschikbaar",
+        "Bijdrage VvE": "\u20ac 139,45 per maand"
+    },
+    "Bouw": {
+        "Soort appartement": "Maisonnette (appartement)",
+        "Soort bouw": "Bestaande bouw",
+        "Bouwjaar": "1985",
+        "Soort dak": "Zadeldak bedekt met pannen",
+        "Keurmerken": "Energie Prestatie Advies"
+    },
+    "Oppervlakten en inhoud": {
+        "Wonen": "66 m\u00b2",
+        "Gebouwgebonden buitenruimte": "4 m\u00b2",
+        "Externe bergruimte": "5 m\u00b2"
+    },
+    "Indeling": {
+        "Aantal kamers": "3 kamers (2 slaapkamers)",
+        "Aantal badkamers": "1 badkamer en 1 apart toilet",
+        "Badkamervoorzieningen": "Douche",
+        "Aantal woonlagen": "2 woonlagen",
+        "Gelegen op": "3e woonlaag",
+        "Voorzieningen": "Natuurlijke ventilatie en TV kabel"
+    },
+    "Energie": {
+        "Energielabel": "A\n            1,18\n\nWat betekent dit?",
+        "Isolatie": "Dubbel glas",
+        "Verwarming": "Cv-ketel",
+        "Warm water": "Cv-ketel",
+        "Cv-ketel": "Intergas (gas gestookt combiketel uit 2017, eigendom)"
+    },
+    "Kadastrale gegevens": {
+        "Eigendomssituatie": "Gemeentelijk eigendom belast met erfpacht",
+        "Lasten": "Afgekocht tot 01-03-2035"
+    },
+    "Buitenruimte": {
+        "Ligging": "Aan rustige weg, in woonwijk en vrij uitzicht",
+        "Balkon/dakterras": "Balkon aanwezig"
+    },
+    "Bergruimte": {
+        "Schuur/berging": "Box",
+        "Voorzieningen": "Elektra"
+    },
+    "Parkeergelegenheid": {
+        "Soort parkeergelegenheid": "Openbaar parkeren"
+    },
+    "VvE checklist": {
+        "Inschrijving KvK": "Ja",
+        "Jaarlijkse vergadering": "Ja",
+        "Periodieke bijdrage": "Ja (\u20ac 139,45 per maand)",
+        "Reservefonds aanwezig": "Ja",
+        "Onderhoudsplan": "Ja",
+        "Opstalverzekering": "Ja"
+    },
+    "images": [
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/082_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/082_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/079_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/079_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/081_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/081_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/085_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/085_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/121_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/121_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/083_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/083_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/084_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/084_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/086_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/086_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/087_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/087_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/088_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/088_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/089_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/089_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/090_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/090_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/091_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/091_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/092_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/092_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/093_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/093_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/096_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/096_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/095_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/095_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/097_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/097_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/098_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/098_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/100_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/100_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/099_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/099_2160x1440.jpg"
+        },
+        {
+            "original": "https://cloud.funda.nl/valentina_media/140/948/102_2160x1440.jpg",
+            "thumbnail": "https://cloud.funda.nl/valentina_media/140/948/102_2160x1440.jpg"
+        }
+    ],
+    "metadata": {
+        "scrape_time": "2021-03-24T21:41:34.984690",
+        "cleaned_time": "03/29/2021, 14:24:07"
+    },
+    "price": 260000
+}

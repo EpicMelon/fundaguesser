@@ -29,7 +29,7 @@ function Timer({deadline}) {
 
     return (
         <div className="timerDiv">
-            <div className="timer" style={{width: time / 6 * 100 + "%"}}>
+            <div className="timer" style={{width: time / 30 * 100 + "%"}}>
                 {time}
             </div>
         </div>

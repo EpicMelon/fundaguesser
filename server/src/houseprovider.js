@@ -13,16 +13,16 @@ houseCatalog = JSON.parse(catalogFile);
 
 // after max attempts it just picks the latest attempt, whether banned or not
 const MAX_ATTEMPTS = 150;
-function getId(cities, bannedIds) {
+function getId(categories, bannedIds) {
     var randomEntry;
     for (var i=0; i < MAX_ATTEMPTS; i++) {
-        var randomCity = cities[Math.floor(Math.random() * cities.length)];
-
+        var randomCity = categories[Math.floor(Math.random() * categories.length)];
+        // console.log("choosing from entries:", houseCatalog[randomCity]);
         var cityObjects = houseCatalog[randomCity];
 
         randomEntry = cityObjects[Math.floor(Math.random() * cityObjects.length)];
 
-        if (!bannedIds.includes(randomEntry["id"])) {
+        if (!bannedIds.includes(randomEntry)) {
             return randomEntry;
         }
     }
@@ -33,29 +33,33 @@ function getId(cities, bannedIds) {
     return randomEntry;
 }
 
-function getHouse(cities, bannedIds) {
-    var catalogEntry = getId(cities, bannedIds);
-    
-    var path = catalogEntry["path"];
+function getHouse(categories, bannedIds) {
+    var path = getId(categories, bannedIds);
 
     var houseFile = fs.readFileSync('./houses/'+ path, 'utf8');
-    var houseData = JSON.parse(houseFile)[0];
+    
+    var houseData = JSON.parse(houseFile);
 
-    bannedIds.push(catalogEntry["id"]);
+    bannedIds.push(path);
 
     return houseData;
 }
 
-function getHouses(amount, cities, bannedIds) {
-    // check if no cities are provided, defaults to 'amsterdam'
-    if (cities.length == 0) {
-        cities = ['amsterdam'];
+function getHouses(amount, categories, bannedIds) {
+    // check if no categories are provided, defaults to 'amsterdam'
+    for (var i = categories.length - 1; i >= 0; i--) {
+        if ((houseCatalog[categories[i]] == null) || (houseCatalog[categories[i]].length == 0)) {
+            categories.splice(i, 1);
+        }
+    }
+    if (categories.length == 0) {
+        categories = ['amsterdam'];
     }
 
-    // get all the houses
+    // get the houses
     var houses = [];
     for (var i = 0; i < amount; i++) {
-        var house = getHouse(cities, bannedIds);
+        var house = getHouse(categories, bannedIds);
 
         houses.push(house);
     }

@@ -1,22 +1,68 @@
 {
-    "amsterdam" : [
-        {
-            "id" : "0",
-            "path" : "amsterdam/example-house-0.json"
-        },
-        {
-            "id" : "1",
-            "path" : "amsterdam/example-house-1.json"
-        }
+    "all": [
+        "amsterdam/huis-41350394-ten-busschekamp-25",
+        "amsterdam/huis-41117302-oudezijds-achterburgwal-107",
+        "amsterdam/appartement-41215698-postjesweg-205",
+        "amsterdam/huis-41240717-jan-de-louterstraat-103",
+        "amsterdam/appartement-41242633-daniel-stalpertstraat-26-iii",
+        "amsterdam/huis-41233647-tuinderijlaan-3",
+        "amsterdam/appartement-87604712-eerste-schinkelstraat-5-d",
+        "amsterdam/huis-41242958-de-biezenhof-24",
+        "amsterdam/huis-87718176-silvoldestraat-141",
+        "amsterdam/huis-41290046-arent-janszoon-ernststraat-158",
+        "amsterdam/appartement-41270223-hermanus-coenradistraat-12-1",
+        "amsterdam/appartement-41246673-gaasterlandstraat-48",
+        "amsterdam/appartement-41241598-veembroederhof-71",
+        "amsterdam/huis-41205021-prins-hendriklaan-46",
+        "amsterdam/huis-41354532-adrianus-van-waertweg-32",
+        "amsterdam/appartement-41240536-wethouder-ed-polakstraat-7",
+        "amsterdam/appartement-41231774-singel-281-3",
+        "amsterdam/appartement-41231304-eerste-oosterparkstraat-107-d",
+        "amsterdam/huis-41244959-van-boshuizenstraat-227",
+        "amsterdam/appartement-41273802-faas-wilkesstraat-489",
+        "amsterdam/huis-41006005-buiten-vissersstraat-4",
+        "amsterdam/huis-41201497-osdorperweg-517",
+        "amsterdam/appartement-41242350-donker-curtiusstraat-47",
+        "amsterdam/appartement-41230548-egelantiersstraat-81-2",
+        "amsterdam/appartement-41237213-koningsstraat-52-h",
+        "amsterdam/huis-41298760-cycladenlaan-5",
+        "amsterdam/appartement-41240568-hogevecht-14",
+        "amsterdam/huis-41240158-charlie-parkerstraat-13",
+        "amsterdam/huis-41358274-juttepeerpad-20",
+        "amsterdam/huis-41291415-dorpsweg-ransdorp-94",
+        "amsterdam/appartement-41234842-veembroederhof-67"
     ],
-    "zwolle" : [
-        {
-            "id" : "2",
-            "path" : "zwolle/example-house-2.json"
-        },
-        {
-            "id" : "4",
-            "path" : "zwolle/example-house-3.json"
-        }
+    "amsterdam": [
+        "amsterdam/huis-41350394-ten-busschekamp-25",
+        "amsterdam/huis-41117302-oudezijds-achterburgwal-107",
+        "amsterdam/appartement-41215698-postjesweg-205",
+        "amsterdam/huis-41240717-jan-de-louterstraat-103",
+        "amsterdam/appartement-41242633-daniel-stalpertstraat-26-iii",
+        "amsterdam/huis-41233647-tuinderijlaan-3",
+        "amsterdam/appartement-87604712-eerste-schinkelstraat-5-d",
+        "amsterdam/huis-41242958-de-biezenhof-24",
+        "amsterdam/huis-87718176-silvoldestraat-141",
+        "amsterdam/huis-41290046-arent-janszoon-ernststraat-158",
+        "amsterdam/appartement-41270223-hermanus-coenradistraat-12-1",
+        "amsterdam/appartement-41246673-gaasterlandstraat-48",
+        "amsterdam/appartement-41241598-veembroederhof-71",
+        "amsterdam/huis-41205021-prins-hendriklaan-46",
+        "amsterdam/huis-41354532-adrianus-van-waertweg-32",
+        "amsterdam/appartement-41240536-wethouder-ed-polakstraat-7",
+        "amsterdam/appartement-41231774-singel-281-3",
+        "amsterdam/appartement-41231304-eerste-oosterparkstraat-107-d",
+        "amsterdam/huis-41244959-van-boshuizenstraat-227",
+        "amsterdam/appartement-41273802-faas-wilkesstraat-489",
+        "amsterdam/huis-41006005-buiten-vissersstraat-4",
+        "amsterdam/huis-41201497-osdorperweg-517",
+        "amsterdam/appartement-41242350-donker-curtiusstraat-47",
+        "amsterdam/appartement-41230548-egelantiersstraat-81-2",
+        "amsterdam/appartement-41237213-koningsstraat-52-h",
+        "amsterdam/huis-41298760-cycladenlaan-5",
+        "amsterdam/appartement-41240568-hogevecht-14",
+        "amsterdam/huis-41240158-charlie-parkerstraat-13",
+        "amsterdam/huis-41358274-juttepeerpad-20",
+        "amsterdam/huis-41291415-dorpsweg-ransdorp-94",
+        "amsterdam/appartement-41234842-veembroederhof-67"
     ]
 }
