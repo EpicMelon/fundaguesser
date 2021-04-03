@@ -25,7 +25,29 @@ app.get('/*', (req, res) => {
 });
 
 // Attach express app to server
-const server = require('http').createServer(app);
+
+var server;
+var PORT = process.env.PORT || 443;
+
+const USE_HTTPS = false;
+
+if (USE_HTTPS) {
+  const fs = require('fs');
+  var key = fs.readFileSync(__dirname + '/selfsigned.key');
+  var cert = fs.readFileSync(__dirname + '/selfsigned.crt');
+  var options = {
+    key: key,
+    cert: cert
+  };
+  
+  server = require('https').createServer(options, app);
+  PORT = 443;
+}
+else {
+  server = require('http').createServer(app);
+  PORT = 80;
+}
+
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
@@ -34,6 +56,7 @@ const io = require("socket.io")(server, {
 
 // create new socket.io app
 var ios = require('socket.io-express-session');
+const e = require('express');
 io.use(ios(session)); // session support
 
 // initialize server
@@ -45,7 +68,6 @@ io.on('connection', (socket) => {
 });
 
 // start server
-const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
   console.log('listening on *:' + PORT);
 });
