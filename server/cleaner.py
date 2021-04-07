@@ -1,6 +1,16 @@
 import datetime
+import geocoder
+import re
 
-def clean_json(house):
+def clean_json(house, house_name):
+    # add the street
+    if not add_street(house, house_name):
+        return False
+
+    # add the coordinates
+    if not add_coordinates(house):
+        return False
+
     # parse the price
     if not add_price(house):
         return False
@@ -33,8 +43,20 @@ def fix_images(house):
     # yea i just assume it is already the fixed json
     return True
 
+def add_street(house, house_name):
 
+    street = re.findall(r"(\d{8})-(.*)", house_name)[0][1]
+    house["street"] = street
 
+    return True
+
+def add_coordinates(house):
+    
+    obj = geocoder.osm(house["street"])
+    
+    house["position"] = obj.latlng
+
+    return True
 
 def add_price(house):
     try:
