@@ -5,6 +5,9 @@ import { ID_SIZE } from "../../context/config";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
 function JoinGame() {
     const socket = useContext(SocketContext);
     const history = useHistory();
@@ -41,12 +44,12 @@ function JoinGame() {
     return (
         <form onSubmit={handleSubmit(joinGameRequest)}>
             <div>
-                <input name="inputId" ref={
+                <TextField name="inputId" ref={
                     register({required: true, minLength: ID_SIZE, maxLength: ID_SIZE}
                         )}
                 placeholder={"0".repeat(ID_SIZE)} type="text" maxLength={ID_SIZE} autoComplete="off"
                 className="whiteWrite joinWrite"/>
-                <input type="submit" value="Join Game" className="blueButton joinButton"/>
+                <Button type="submit" size="large" variant="contained" color="primary"> Join Game </Button>
             </div>
         </form>
     )

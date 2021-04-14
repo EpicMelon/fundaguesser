@@ -184,9 +184,6 @@ class GameRoom {
     }
 
     emitCurrentHouse(socket) {
-        console.log("About to emit, i have as data:");
-        console.dir(this.houseDataOfRound);
-
         // temporarily remove price from house when emitting (this can be done better, temp solution)
         var price = this.houseDataOfRound[this.currentHouse].price;
         delete this.houseDataOfRound[this.currentHouse].price;
@@ -256,13 +253,7 @@ function startGame(socket) {
     startRound(socket.roomId);
 }
 
-
 function startRound(roomId) {
-
-    console.log("hey starting round... with data:");
-    console.dir(data[roomId].houseDataOfRound);
-
-
     if (data[roomId].currentHouse >= data[roomId].houseDataOfRound.length) {
         data[roomId].end();
         return;

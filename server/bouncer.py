@@ -8,7 +8,7 @@ CATALOG_PATH = "./server/houses/catalog.json"
 TO = "./server/houses/"
 FROM = "./server/raw_data/"
 
-RESET = True
+RESET = False
 
 if RESET:
     catalog = {}

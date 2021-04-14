@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Room from "./components/Room";
 import Menu from "./components/Menu";
 
+import "./css/new/root.css"
+
 function App() {
   return (
       <Router>

@@ -5,6 +5,7 @@ import {SocketContext, socket} from '../context/socket';
 
 import Logo from './Menu/Logo';
 
+import RoomBar from './Room/RoomBar';
 import SetName from './Room/SetName';
 import LeaveGame from './Room/LeaveGame';
 import UserList from './Room/UserList';
@@ -12,10 +13,6 @@ import ChatRoom from './Room/ChatRoom';
 
 import GameInterface from './Room/GameInterface';
 
-import '../css/base.css';
-import '../css/menu.css';
-import '../css/room.css';
-import '../css/sidebar.css';
 
 const Room = () => {
     let { roomId } = useParams();
@@ -76,6 +73,7 @@ const Room = () => {
         <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
                 <div>
+                    <RoomBar />
                     <div className="show" onClick={toggleSidebar}> Chat {">"} </div>
 
                     <div className={sidebarActive ? "sideBar active" : "sideBar"}>
@@ -90,10 +88,12 @@ const Room = () => {
                     <GameInterface sidebar={sidebarActive}/>
                 </div>
                 ) : (
-                <div>
-                    <Logo/>
+                <div className="menu">
+                    <div className="logoDiv">
+                        <Logo/>
+                    </div>
 
-                    <div className="menu">
+                    <div className="buttons">
                         <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
                         <SetName onNameSubmission={setNameAndJoin}/>
                     </div>

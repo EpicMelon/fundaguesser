@@ -3,6 +3,8 @@ import {SocketContext} from '../../context/socket';
 
 import { useHistory } from "react-router-dom";
 
+import Button from '@material-ui/core/Button';
+
 function CreateGame() {
     const socket = useContext(SocketContext);
     const history = useHistory();
@@ -33,9 +35,9 @@ function CreateGame() {
     }, [socket, createGameConfirmed]);
 
     return (
-        <button onClick={createGameRequest} className="blueButton bigButton">
+        <Button size="large" variant="contained" color="primary" onClick={createGameRequest} className="create">
             Create Game
-        </button>
+        </Button>
     )
 }
 

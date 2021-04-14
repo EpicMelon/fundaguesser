@@ -6,8 +6,7 @@ import Logo from './Menu/Logo';
 import CreateGame from './Menu/CreateGame';
 import JoinGame from './Menu/JoinGame';
 
-import '../css/base.css';
-import '../css/menu.css';
+import '../css/new/landing.css';
 
 const Menu = () => {
     const location = useLocation();
@@ -32,16 +31,16 @@ const Menu = () => {
         <SocketContext.Provider value={socket}>
             <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
 
-            <div>
-                <Logo/>
-            </div>
-
             <div className="menu">
-                <div>
-                    <div className="createDiv"> <CreateGame/> </div>
-                    <div className="joinDiv"> <JoinGame /> </div>
-                    
+                <div className="logoDiv">
+                    <Logo/>
                 </div>
+
+                <div className="buttons">
+                    <CreateGame/>
+                    <JoinGame />
+                </div>
+
                 {error ? (<div className="error"> Error: {error} </div>) : (<div></div>)}
             </div>
         </SocketContext.Provider>

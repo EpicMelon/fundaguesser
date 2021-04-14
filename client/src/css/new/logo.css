@@ -1,0 +1,9 @@
+/* Logo */
+.logoStyle {
+    font-family: inherit;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    text-align: center;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
+}

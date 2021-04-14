@@ -3,6 +3,8 @@ import {SocketContext} from '../../context/socket';
 
 import { useHistory } from "react-router-dom";
 
+import '../../css/new/logo.css';
+
 function Logo() {
     const socket = useContext(SocketContext);
     const history = useHistory();

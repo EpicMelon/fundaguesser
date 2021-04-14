@@ -1,6 +1,8 @@
 import React, {useState, useContext, useCallback, useEffect} from 'react';
 import ImageGallery from 'react-image-gallery';
 
+import MyMap from './MyMap';
+
 import '../../css/display.css';
 
 function Display({house}) {
@@ -24,6 +26,8 @@ function Display({house}) {
               ))}
             </ul>
           </div>
+
+          <MyMap position={[52.384838, 4.871]}/>
 
           <div className="images">
             <ImageGallery items={house.images} />
