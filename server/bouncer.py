@@ -5,8 +5,8 @@ from cleaner import clean_json
 
 CATALOG_PATH = "./server/houses/catalog.json"
 
-TO = "./server/houses/"
-FROM = "./server/raw_data/"
+TO = "./houses/"
+FROM = "./raw_data/"
 
 RESET = False
 
@@ -46,7 +46,7 @@ for city in os.scandir(FROM):
             house_data = json.load(house_file)
 
             # clean the data
-            success = clean_json(house_data)
+            success = clean_json(house_data, house.name)
 
             if not success:
                 print("something went wrong parsing", house.path)
