@@ -1,0 +1,18 @@
+.setNameWrite {
+    width: 340px;
+    font-size: 24px;
+    border: none;
+    text-align: center;
+}
+
+.roomNameDiv {
+    text-align: center;
+    color: #3F50B5;
+}
+
+.nameDiv {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

@@ -10,7 +10,7 @@ html, body, #root {
 
 body {
     background-color: #F7A100;
-    background-image: linear-gradient(177deg,#ffba39, #F7A100 40% 60%, #da8e01);
+    background-image: linear-gradient(177deg,#60C5F8, #E7F2F7 10% 90%, #60C5F8);
     font-family: 'proxima-nova', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

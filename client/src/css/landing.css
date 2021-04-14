@@ -8,7 +8,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    margin-top: 15%;
+    background-color: #F7A100;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
 }
 
 .logoDiv {
@@ -17,7 +19,8 @@
 
 .buttons {
     margin: 5%;
-    width: 250px;
+    width: 300px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -25,15 +28,23 @@
 }
 
 .create {
-    margin: 50px;
+    width: 300px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.joinDiv {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .joinWrite {
-    width: 50px;
-}
-
-.setNameWrite {
-    width: 100px;
+    width: 40px;
+    font-size: 24px;
+    border: none;
+    text-align: center;
 }
 
 /* Error */

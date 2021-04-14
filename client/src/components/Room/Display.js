@@ -3,8 +3,6 @@ import ImageGallery from 'react-image-gallery';
 
 import MyMap from './MyMap';
 
-import '../../css/display.css';
-
 function Display({house}) {
     useEffect(() => {
       console.log("Showing house:");

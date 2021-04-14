@@ -43,12 +43,13 @@ function JoinGame() {
 
     return (
         <form onSubmit={handleSubmit(joinGameRequest)}>
-            <div>
-                <TextField name="inputId" ref={
-                    register({required: true, minLength: ID_SIZE, maxLength: ID_SIZE}
-                        )}
-                placeholder={"0".repeat(ID_SIZE)} type="text" maxLength={ID_SIZE} autoComplete="off"
-                className="whiteWrite joinWrite"/>
+            <div className="joinDiv">
+                <input name="inputId"
+                    ref={register({required: true, minLength: ID_SIZE, maxLength: ID_SIZE})}
+                    placeholder={"0".repeat(ID_SIZE)} type="text" maxLength={ID_SIZE} autoComplete="off"
+                    className="whiteWrite joinWrite"
+                    inputProps={{style: { textAlign: 'center' },}}
+                />
                 <Button type="submit" size="large" variant="contained" color="primary"> Join Game </Button>
             </div>
         </form>

@@ -13,6 +13,10 @@ import ChatRoom from './Room/ChatRoom';
 
 import GameInterface from './Room/GameInterface';
 
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from '../context/color';
+
+import '../css/gamepage.css';
 
 const Room = () => {
     let { roomId } = useParams();
@@ -70,6 +74,7 @@ const Room = () => {
 
     return (
         <SocketContext.Provider value={socket}>
+        <MuiThemeProvider theme={theme}>
         <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
                 <div>
@@ -99,6 +104,7 @@ const Room = () => {
                     </div>
                 </div>)
             }
+            </MuiThemeProvider>
         </SocketContext.Provider>
     );
 }
