@@ -7,6 +7,8 @@ import Input from './Input';
 
 import Result from './Result';
 
+import Button from '@material-ui/core/Button';
+
 import {SocketContext, socket} from '../../context/socket';
 
 function euroFormat(amount) {
@@ -137,7 +139,8 @@ function GameInterface({sidebar}) {
             <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
                 {winners.length == 1 ? winners[0] + "won!" : winners.map((value) => (value + ", ")) + "won!"}
                 {leader ? (
-                    <button className="blueButton bigButton" onClick={startGame}> Start New Game! </button>
+                    <Button variant="contained" color="primary"
+                    className="blueButton bigButton" onClick={startGame}> Start New Game! </Button>
                 ) : (
                     <h2> The lobby leader can start a new game...</h2>
                 )}
@@ -148,7 +151,8 @@ function GameInterface({sidebar}) {
     return (
         <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
             {leader ? (
-                <button className="blueButton bigButton startButton" onClick={startGame}> Start Game </button>
+                <Button variant="contained" color="primary"
+                className="blueButton bigButton startButton" onClick={startGame}> Start Game </Button>
             ) : (
                 <h2 className="wait"> Wait for the lobby leader to start the game..</h2>
             )}

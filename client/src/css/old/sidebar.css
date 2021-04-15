@@ -91,64 +91,6 @@
     background-color: darkred;
 }
 
-/* Chat */
-
-.messages {
-    overflow-y:scroll;
-    overflow: hidden;
-    height: 220px;
-
-    list-style-type: none;
-    overflow-wrap: break-word;
-}
-
-.messages ul {
-    padding: 0;
-    margin: 5px;
-    list-style-type: none;
-}
-
-.messages li {
-    margin: 0px 0px 0px 0px;
-    padding: 5px 0px;
-}
-
-.messages li:nth-child(2n) {
-    background-color: rgb(253, 243, 229);
-}
-
-.sendDiv {
-    position: relative;
-    bottom: 0px;
-    height: 54px;
-    width: 100%;
-    display: block;
-}
-
-.sendForm {
-    width: 95%;
-    display: block;
-    margin: auto;
-}
-
-.msgWrite {
-    width: 80%;
-    padding: 4px;
-    height: 34px;
-    font-size: 16px;
-    overflow: hidden;
-    float:left;
-    display: block;
-    overflow-wrap: break-word;
-}
-
-.msgButton {
-    padding: 8px;
-    font-size: 16px;
-    height: 42px;
-    float:left;
-}
-
 /* UserList */
 
 .userListDiv {

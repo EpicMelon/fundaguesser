@@ -35,8 +35,7 @@ function CreateGame() {
     }, [socket, createGameConfirmed]);
 
     return (
-        <Button size="large" variant="contained" color="primary"
-            m={2} pt={3}
+        <Button size="large" variant="contained" color="primary" classes="chat"
             onClick={createGameRequest} className="create">
             Create Game
         </Button>

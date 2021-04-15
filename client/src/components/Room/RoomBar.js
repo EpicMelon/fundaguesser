@@ -12,9 +12,8 @@ function RoomBar() {
           <AppBar position="static">
             <Toolbar>
               <Typography variant="h6" className="Title">
-                News
+                FundaGuesser
               </Typography>
-              <Button color="inherit">Login</Button>
             </Toolbar>
           </AppBar>
         </div>

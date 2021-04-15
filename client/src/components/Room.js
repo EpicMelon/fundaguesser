@@ -7,9 +7,8 @@ import Logo from './Menu/Logo';
 
 import RoomBar from './Room/RoomBar';
 import SetName from './Room/SetName';
-import LeaveGame from './Room/LeaveGame';
-import UserList from './Room/UserList';
-import ChatRoom from './Room/ChatRoom';
+
+import SideThing from './Room/SideThing';
 
 import GameInterface from './Room/GameInterface';
 
@@ -79,16 +78,9 @@ const Room = () => {
             {joined ? (
                 <div>
                     <RoomBar />
-                    <div className="show" onClick={toggleSidebar}> Chat {">"} </div>
-
-                    <div className={sidebarActive ? "sideBar active" : "sideBar"}>
-                        <p className="hide" onClick={toggleSidebar}> {"<"} Collapse </p>
-                        <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
-                        <div className="linkDiv"> <h1 className="link"> https://fundaguesser.nl/{roomId} </h1> </div>
-                        <ChatRoom />
-                        <UserList />
-                        <LeaveGame />
-                    </div>
+                    <SideThing  />
+                    <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
+                    <div className="linkDiv"> <h1 className="link"> https://fundaguesser.nl/{roomId} </h1> </div>
 
                     <GameInterface sidebar={sidebarActive}/>
                 </div>

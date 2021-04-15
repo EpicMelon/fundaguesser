@@ -1,6 +1,29 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
+  overrides: {
+    MuiButton: {
+      root: {                
+        "&:not($sizeLarge):not($sizeSmall) $label": {
+          fontSize: 16,
+          fontFamily: 'proxima-nova'
+        }
+      },
+      sizeLarge: {
+        "& $label": {
+          fontSize: 28,
+          fontFamily: 'proxima-nova'
+        }
+      },
+      sizeSmall: {
+        "& $label": {
+          fontSize: 12,
+          fontFamily: 'proxima-nova',
+          padding: '0px'
+        }
+      }
+    }
+  },
   palette: {
     lightorange : '#F8C463',
     primary: {
@@ -21,8 +44,12 @@ const theme = createMuiTheme({
     button: {
       textTransform: 'none'
     },
-    fontSize: 22,
-    fontFamily: 'proxima-nova'
+    menu : {
+      fontSize: 22
+    },
+    chat : {
+      fontSize: 16
+    },
   },
 });
 
