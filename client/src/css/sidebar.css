@@ -1,0 +1,21 @@
+.MuiDrawer-paper {
+    width: 360px !important;
+}
+
+.link {
+    font-size: 22px;
+    text-align: center;
+}
+
+.headertje {
+    background-color: #f1f1f1;
+    padding: 20px;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    margin-bottom: 10px;
+}
+
+.roomNumber {
+    color: #F7A100;
+}

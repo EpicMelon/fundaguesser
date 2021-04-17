@@ -3,6 +3,8 @@ import {SocketContext} from '../../context/socket';
 
 import UserListEntry from './UserListEntry';
 
+import '../../css/userlist.css';
+
 function UserList() {
     const socket = useContext(SocketContext);
 

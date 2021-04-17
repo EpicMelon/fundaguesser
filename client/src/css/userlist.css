@@ -1,0 +1,37 @@
+
+/* UserList */
+
+.userListDiv {
+    overflow-y:scroll;
+    overflow: hidden;
+
+    max-height: 300px;
+
+    list-style-type: none;
+    overflow-wrap: break-word;
+}
+
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.placing {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.username {
+    align-self: center;
+    margin-left: 5%;
+    font-size: 22px;
+}
+
+.points {
+    align-self: right;
+    margin-right: 5%;
+    margin-left: auto;
+    font-size: 22px;
+}

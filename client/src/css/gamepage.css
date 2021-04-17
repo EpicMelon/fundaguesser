@@ -1,3 +1,8 @@
+.room {
+    min-height: 100% !important;
+    display: block;
+}
+
 .setNameWrite {
     width: 340px;
     font-size: 24px;

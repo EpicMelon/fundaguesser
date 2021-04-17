@@ -4,7 +4,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {                
-        "&:not($sizeLarge):not($sizeSmall) $label": {
+        "&:not($sizeLarge):not($sizeSmall)not($sizeGiant) $label": {
           fontSize: 16,
           fontFamily: 'proxima-nova'
         }
@@ -13,6 +13,13 @@ const theme = createMuiTheme({
         "& $label": {
           fontSize: 28,
           fontFamily: 'proxima-nova'
+        }
+      },
+      sizeGiant: {
+        "& $label": {
+          fontSize: 44,
+          fontFamily: 'proxima-nova',
+          margin: '5%'
         }
       },
       sizeSmall: {

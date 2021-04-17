@@ -76,11 +76,9 @@ const Room = () => {
         <MuiThemeProvider theme={theme}>
         <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
-                <div>
+                <div className="room">
                     <RoomBar />
                     <SideThing  />
-                    <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
-                    <div className="linkDiv"> <h1 className="link"> https://fundaguesser.nl/{roomId} </h1> </div>
 
                     <GameInterface sidebar={sidebarActive}/>
                 </div>

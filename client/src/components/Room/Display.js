@@ -11,6 +11,14 @@ function Display({house}) {
 
     return (
         <div className="display">
+          <div className="topThings">
+            <div className="images">
+              <ImageGallery items={house.images} slideDuration="1"/>
+            </div>
+
+            <MyMap position={[52.384838, 4.871]}/>
+          </div>
+
           <div className="title">
             <h1>{house["Buitenruimte"]["Ligging"]}</h1>
           </div>
@@ -25,11 +33,7 @@ function Display({house}) {
             </ul>
           </div>
 
-          <MyMap position={[52.384838, 4.871]}/>
 
-          <div className="images">
-            <ImageGallery items={house.images} />
-          </div>
         </div>
     )
 }

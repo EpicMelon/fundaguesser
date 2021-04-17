@@ -1,11 +1,19 @@
 
 /* Chat */
 
+.chatDiv {
+    min-width: 100%;
+    position: absolute;
+    bottom: 10px;
+    align-self: flex-end;
+}
+
 .messages {
     overflow-y:scroll;
     overflow: hidden;
-    height: 480px;
-    width: 280px;
+    max-height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
 
     list-style-type: none;
     overflow-wrap: break-word;
@@ -31,12 +39,14 @@
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    width: 200px;
-    margin: auto;
+    width: 80%;
+    margin-left: 10%;
+    bottom: 0px;
+    position: relative;
 }
 
 .msgWrite {
-    width: 400px;
+    width: 100%;
     padding: 4px;
     height: 34px;
     font-size: 16px;

@@ -3,6 +3,10 @@
     width: 600px;
 }
 
+body {
+    /* background-image: linear-gradient(177deg,#60C5F8, #E7F2F7 10% 90%, #60C5F8); */
+}
+
 /* Layout */
 .menu {
     display: flex;

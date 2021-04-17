@@ -59,17 +59,15 @@ function ChatRoom() {
                 <div ref={messagesEndRef} />
             </div>
 
-            <div className="sendDiv">
-                <form onSubmit={handleSubmit(sendMessage)} className="sendForm">
-                    <input name="msg" className="whiteWrite msgWrite" ref={
-                        register({required: true, maxLength: 256}
-                            )}
-                    placeholder={"message"} type="text" maxLength={256} autoComplete="off"/>
-                    <Button type="submit" className="blueButton msgButton" variant="contained" color="primary">
-                        Chat
-                    </Button>
-                </form>
-            </div>
+            <form onSubmit={handleSubmit(sendMessage)} className="sendForm">
+                <input name="msg" className="whiteWrite msgWrite" ref={
+                    register({required: true, maxLength: 256}
+                        )}
+                placeholder={"message"} type="text" maxLength={256} autoComplete="off"/>
+                <Button type="submit" className="blueButton msgButton" variant="contained" color="primary">
+                    Chat
+                </Button>
+            </form>
         </div>
     )
 } // <li key={index}> <ChatMessage text={messages[index]} index={index}/> </li>

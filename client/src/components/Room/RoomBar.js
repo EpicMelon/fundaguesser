@@ -9,11 +9,8 @@ import IconButton from '@material-ui/core/IconButton'
 function RoomBar() {
     return (
         <div>
-          <AppBar position="static">
+          <AppBar position="static" style={{ background: '#F7A100' }}>
             <Toolbar>
-              <Typography variant="h6" className="Title">
-                FundaGuesser
-              </Typography>
             </Toolbar>
           </AppBar>
         </div>
