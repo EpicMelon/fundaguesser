@@ -147,7 +147,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:41:34.984690",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:27"
     },
-    "price": 260000
+    "price": 260000,
+    "street": "wethouder-ed-polakstraat-7",
+    "position": [
+        52.2924793,
+        4.987854
+    ]
 }

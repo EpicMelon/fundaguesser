@@ -182,7 +182,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:38:37.631850",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:28"
     },
-    "price": 750000
+    "price": 750000,
+    "street": "veembroederhof-71",
+    "position": [
+        52.3766817,
+        4.922787
+    ]
 }

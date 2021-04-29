@@ -252,7 +252,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:55:37.307972",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:29"
     },
-    "price": 1100000
+    "price": 1100000,
+    "street": "gaasterlandstraat-48",
+    "position": [
+        52.3376946,
+        4.8966609
+    ]
 }

@@ -128,11 +128,11 @@ function GameInterface({sidebar}) {
     if (started) {
         return (
             <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
-                {/* <Timer deadline={roundData.timer}/> */}
+                {!resultScreen ? (<Timer deadline={roundData.timer}/>) : ""}
                 
-                {roundData.house ? <Display house={roundData.house}/> : "Could not load house"}
-                {/* {resultScreen ? (<Result results={resultData} myId={socket.id}/>) : ""}
-                {!resultScreen ? (<Input currentGuess={currentGuess} makeGuess={makeGuess}/>) : ""} */}
+                {roundData.house ? <Display house={roundData.house} hideNav={resultScreen}/> : "Could not load house"}
+                {resultScreen ? (<Result results={resultData} myId={socket.id}/>) : ""}
+                {!resultScreen ? (<Input currentGuess={currentGuess} makeGuess={makeGuess}/>) : ""}
             </div>
         )
     }
@@ -140,7 +140,9 @@ function GameInterface({sidebar}) {
     if (ended) {
         return (
             <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
-                {winners.length == 1 ? winners[0] + "won!" : winners.map((value) => (value + ", ")) + "won!"}
+                <h2 className="wait">
+                    {winners.length == 1 ? winners[0] + " won the game!" : winners.map((value) => (value + ", ")) + "won!"}
+                </h2>
                 <div className="startOption">
                     {leader ? (
                         <Button variant="contained" color="primary"

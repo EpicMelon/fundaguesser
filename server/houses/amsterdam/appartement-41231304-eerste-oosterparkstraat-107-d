@@ -161,7 +161,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:58:01.494394",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:25"
     },
-    "price": 460000
+    "price": 460000,
+    "street": "eerste-oosterparkstraat-107-d",
+    "position": [
+        52.3563675,
+        4.9107672
+    ]
 }

@@ -330,7 +330,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:48:15.383583",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:34"
     },
-    "price": 6250000
+    "price": 6250000,
+    "street": "prins-hendriklaan-46",
+    "position": [
+        52.353594,
+        4.8609107
+    ]
 }

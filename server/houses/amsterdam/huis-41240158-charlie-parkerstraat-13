@@ -294,7 +294,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:36:14.630946",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:34"
     },
-    "price": 550000
+    "price": 550000,
+    "street": "charlie-parkerstraat-13",
+    "position": [
+        52.3435731,
+        4.8239168
+    ]
 }

@@ -137,7 +137,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:37:16.002172",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:29"
     },
-    "price": 675000
+    "price": 675000,
+    "street": "daniel-stalpertstraat-26-iii",
+    "position": [
+        52.3562194,
+        4.8881974
+    ]
 }

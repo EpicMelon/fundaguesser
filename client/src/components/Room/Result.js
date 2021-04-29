@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../../css/results.css'
+
 function euroFormat(amount) {
     var dotted = parseInt(amount).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 

@@ -225,7 +225,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:39:59.870389",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:32"
     },
-    "price": 375000
+    "price": 375000,
+    "street": "osdorperweg-517",
+    "position": [
+        52.3663521,
+        4.7845723
+    ]
 }

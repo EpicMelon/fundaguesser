@@ -2,6 +2,8 @@ import React, {useState, useCallback, useEffect} from 'react';
 
 import { useForm } from "react-hook-form";
 
+import '../../css/input.css'
+
 function Input({currentGuess, makeGuess}) {
     const { register, handleSubmit, watch, errors, reset } = useForm();
 

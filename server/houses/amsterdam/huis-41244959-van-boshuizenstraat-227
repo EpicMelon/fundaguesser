@@ -229,7 +229,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T14:17:13.467278",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:36"
     },
-    "price": 950000
+    "price": 950000,
+    "street": "van-boshuizenstraat-227",
+    "position": [
+        52.3249234,
+        4.8861404
+    ]
 }

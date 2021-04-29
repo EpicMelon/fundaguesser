@@ -3,7 +3,7 @@ import json
 
 from cleaner import clean_json
 
-CATALOG_PATH = "./server/houses/catalog.json"
+CATALOG_PATH = "./houses/catalog.json"
 
 TO = "./houses/"
 FROM = "./raw_data/"

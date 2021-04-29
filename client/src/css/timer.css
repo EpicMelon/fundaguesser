@@ -1,0 +1,20 @@
+.timer {
+    position: fixed;
+    z-index: 500;
+    bottom: 50px;
+    right: 500px;
+    background: #53241B;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    border: 5px #60C5F8 solid;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.timerText {
+    color: white;
+    font-size: 100px;
+    font-family: inherit;
+}
