@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    min-height: 100%;
+    min-height: 1200px;
 }
 
 .gameDiv.sidebarActive {
@@ -27,7 +27,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -42,7 +42,27 @@ body {
 }
 
 .map {
-    width: 500px;
+    width: 300px;
     margin: 50px;
     margin-top: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    .images {
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .map {
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .topThings {
+        flex-direction: column;
+    }
+
+    .display {
+        justify-content: flex-start;
+    }
 }

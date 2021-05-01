@@ -7,6 +7,7 @@
     background-color: rgba(17, 17, 17, 0.527);
     padding-top: 10px;
     z-index: 0;
+    width: 100%;
 }
 
 .inputGuess {
@@ -44,4 +45,14 @@
   background: #53241B;
   cursor: pointer;
   border: 2px #60C5F8 solid;
+}
+
+@media screen and (max-width: 800px) {
+  .inputDiv {
+    width: 100%;
+  }
+  .inputSlider {
+    width: 100%;
+    z-index: 500;
+  }
 }

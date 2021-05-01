@@ -9,6 +9,11 @@
     text-shadow: 2px 2px #000000;
     text-align: center;
     font-size: 30px;
+    min-height: 960px;
+}
+
+.results .sidebarActive {
+    width: 100%;
 }
 
 .results .correctLabel {
@@ -56,4 +61,14 @@
     0% {opacity:0;}
     80% {opacity:0;}
     100% {opacity:1;}
+}
+
+@media screen and (max-width: 800px) {
+    .results {
+        width: 100%;
+        z-index: 9999;
+    }
+    .results .correctPrice {
+        font-size: 55px;
+    }
 }

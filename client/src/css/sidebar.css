@@ -19,3 +19,12 @@
 .roomNumber {
     color: #F7A100;
 }
+
+.hideButton {
+    position: fixed;
+    top: 5px;
+}
+
+.MuiToolbar-root {
+    flex-direction: row-reverse;
+}

@@ -1,4 +1,4 @@
-import React, {useContext, useCallback, useEffect, useState} from 'react';
+import React, {useContext, useCallback, useEffect, useState, useRef} from 'react';
 import { useHistory, useParams } from "react-router-dom";
 
 import {SocketContext, socket} from '../context/socket';
@@ -45,8 +45,6 @@ const Room = () => {
     }, []);
 
     const [sidebarActive, setsidebarActive] = useState(true);
-
-    const toggleSidebar = () => setsidebarActive(!sidebarActive);
     
     // Set up
     useEffect(() => {
@@ -70,6 +68,10 @@ const Room = () => {
         };
     }, [socket, joinGameConfirmed, joinGameDenied]);
 
+    function openDrawer() {
+        console.log("Wow!!");
+        setsidebarActive(true);
+    }
 
     return (
         <SocketContext.Provider value={socket}>
@@ -77,8 +79,8 @@ const Room = () => {
         <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
                 <div className="room">
-                    <RoomBar />
-                    <SideThing  />
+                    <RoomBar open={sidebarActive} setOpen={setsidebarActive}/>
+                    <SideThing open={sidebarActive} setOpen={setsidebarActive}/>
 
                     <GameInterface sidebar={sidebarActive}/>
                 </div>

@@ -75,3 +75,22 @@ body {
     border: 5px #290c06 solid;
     background-color: rgb(158, 23, 23);
 }
+
+/* MOBILE */
+@media screen and (max-width: 500px) {
+    .menu {
+        margin-top: 0%;
+        height: 500px;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    html {
+        background-color: #F7A100;
+    }
+
+    .bigLogo {
+        font-size: 40px;
+        width: 300px;
+    }
+}

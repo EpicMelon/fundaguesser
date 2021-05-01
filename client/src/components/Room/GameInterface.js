@@ -131,7 +131,7 @@ function GameInterface({sidebar}) {
                 {!resultScreen ? (<Timer deadline={roundData.timer}/>) : ""}
                 
                 {roundData.house ? <Display house={roundData.house} hideNav={resultScreen}/> : "Could not load house"}
-                {resultScreen ? (<Result results={resultData} myId={socket.id}/>) : ""}
+                {resultScreen ? (<Result results={resultData} myId={socket.id} sidebarActive={sidebar}/>) : ""}
                 {!resultScreen ? (<Input currentGuess={currentGuess} makeGuess={makeGuess}/>) : ""}
             </div>
         )
@@ -159,7 +159,7 @@ function GameInterface({sidebar}) {
         <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
             <div className="startOption">
                 {leader ? (
-                    <Button variant="contained" color="primary" size="Large"
+                    <Button variant="contained" color="primary" size="large"
                     className="blueButton bigButton startButton" onClick={startGame}> Start Game </Button>
                 ) : (
                     <h2 className="wait"> Wait for the lobby leader to start the game..</h2>

@@ -8,9 +8,9 @@ function euroFormat(amount) {
     return "€" + dotted + ",-"
 }
 
-function Result({results, myId}) {
+function Result({results, myId, sidebarActive}) {
     return (
-        <div className="results">
+        <div className={sidebarActive ? "results sidebarActive" : "results"}>
             <div className="correct">
                 <p className="correctLabel">echte vraagprijs:</p>
                 <p className="correctPrice">{euroFormat(results.correct)}</p>
