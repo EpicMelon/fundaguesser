@@ -7,7 +7,7 @@
 MAX_PLAYERS = 8
 DEFAULT_GUESS = 0
 
-ROUND_TIME = 30000;
+ROUND_TIME = 20000;
 RESULT_TIME = 6000;
 
 HOUSE_COUNT = 5; // PLACEHOLDER
@@ -53,7 +53,7 @@ class GameRoom {
         this.playersData = {};
 
         this.roundLength = 3;
-        this.categories = ['amsterdam', 'zwolle'];
+        this.categories = ['amsterdam'];
 
         this.housesDone = []; 
         this.houseDataOfRound;

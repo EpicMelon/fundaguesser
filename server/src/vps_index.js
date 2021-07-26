@@ -25,7 +25,7 @@ app.use(session);
 
 // Pages
 app.get('/*', (req, res) => {
-  res.redirect('https://' + req.headers.host + req.url);
+  // res.redirect('https://' + req.headers.host + req.url);
   res.sendFile(path.resolve('../client/build/index.html'));
 });
 
