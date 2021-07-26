@@ -7,6 +7,11 @@ import Input from './Input';
 
 import Result from './Result';
 
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+
+import '../../css/game.css';
+
 import {SocketContext, socket} from '../../context/socket';
 
 function euroFormat(amount) {
@@ -123,10 +128,10 @@ function GameInterface({sidebar}) {
     if (started) {
         return (
             <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
-                <Timer deadline={roundData.timer}/>
+                {!resultScreen ? (<Timer deadline={roundData.timer}/>) : ""}
                 
-                {roundData.house ? <Display house={roundData.house}/> : "Could not load house"}
-                {resultScreen ? (<Result results={resultData} myId={socket.id}/>) : ""}
+                {roundData.house ? <Display house={roundData.house} hideNav={resultScreen}/> : "Could not load house"}
+                {resultScreen ? (<Result results={resultData} myId={socket.id} sidebarActive={sidebar}/>) : ""}
                 {!resultScreen ? (<Input currentGuess={currentGuess} makeGuess={makeGuess}/>) : ""}
             </div>
         )
@@ -135,23 +140,31 @@ function GameInterface({sidebar}) {
     if (ended) {
         return (
             <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
-                {winners.length == 1 ? winners[0] + "won!" : winners.map((value) => (value + ", ")) + "won!"}
-                {leader ? (
-                    <button className="blueButton bigButton" onClick={startGame}> Start New Game! </button>
-                ) : (
-                    <h2> The lobby leader can start a new game...</h2>
-                )}
+                <h2 className="wait">
+                    {winners.length == 1 ? winners[0] + " won the game!" : winners.map((value) => (value + ", ")) + "won!"}
+                </h2>
+                <div className="startOption">
+                    {leader ? (
+                        <Button variant="contained" color="primary"
+                        className="blueButton bigButton" onClick={startGame}> Start New Game! </Button>
+                    ) : (
+                        <h2> The lobby leader can start a new game...</h2>
+                    )}
+                </div>
             </div>
         )
     }
 
     return (
         <div className={sidebar ? "gameDiv sidebarActive" : "gameDiv"}>
-            {leader ? (
-                <button className="blueButton bigButton startButton" onClick={startGame}> Start Game </button>
-            ) : (
-                <h2 className="wait"> Wait for the lobby leader to start the game..</h2>
-            )}
+            <div className="startOption">
+                {leader ? (
+                    <Button variant="contained" color="primary" size="large"
+                    className="blueButton bigButton startButton" onClick={startGame}> Start Game </Button>
+                ) : (
+                    <h2 className="wait"> Wait for the lobby leader to start the game..</h2>
+                )}
+            </div>
         </div>
     )
 }

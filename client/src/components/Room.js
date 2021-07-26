@@ -1,4 +1,4 @@
-import React, {useContext, useCallback, useEffect, useState} from 'react';
+import React, {useContext, useCallback, useEffect, useState, useRef} from 'react';
 import { useHistory, useParams } from "react-router-dom";
 
 import {SocketContext, socket} from '../context/socket';
@@ -7,12 +7,15 @@ import Logo from './Menu/Logo';
 
 import RoomBar from './Room/RoomBar';
 import SetName from './Room/SetName';
-import LeaveGame from './Room/LeaveGame';
-import UserList from './Room/UserList';
-import ChatRoom from './Room/ChatRoom';
+
+import SideThing from './Room/SideThing';
 
 import GameInterface from './Room/GameInterface';
 
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from '../context/color';
+
+import '../css/gamepage.css';
 
 const Room = () => {
     let { roomId } = useParams();
@@ -42,8 +45,6 @@ const Room = () => {
     }, []);
 
     const [sidebarActive, setsidebarActive] = useState(true);
-
-    const toggleSidebar = () => setsidebarActive(!sidebarActive);
     
     // Set up
     useEffect(() => {
@@ -67,23 +68,19 @@ const Room = () => {
         };
     }, [socket, joinGameConfirmed, joinGameDenied]);
 
+    function openDrawer() {
+        console.log("Wow!!");
+        setsidebarActive(true);
+    }
 
     return (
         <SocketContext.Provider value={socket}>
+        <MuiThemeProvider theme={theme}>
         <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
             {joined ? (
-                <div>
-                    <RoomBar />
-                    <div className="show" onClick={toggleSidebar}> Chat {">"} </div>
-
-                    <div className={sidebarActive ? "sideBar active" : "sideBar"}>
-                        <p className="hide" onClick={toggleSidebar}> {"<"} Collapse </p>
-                        <div className="roomNameDiv"> <h1 className="roomName"> Lobby {roomId} </h1> </div>
-                        <div className="linkDiv"> <h1 className="link"> https://fundaguesser.nl/{roomId} </h1> </div>
-                        <ChatRoom />
-                        <UserList />
-                        <LeaveGame />
-                    </div>
+                <div className="room">
+                    <RoomBar open={sidebarActive} setOpen={setsidebarActive}/>
+                    <SideThing open={sidebarActive} setOpen={setsidebarActive}/>
 
                     <GameInterface sidebar={sidebarActive}/>
                 </div>
@@ -99,6 +96,7 @@ const Room = () => {
                     </div>
                 </div>)
             }
+            </MuiThemeProvider>
         </SocketContext.Provider>
     );
 }

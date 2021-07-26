@@ -6,7 +6,10 @@ import Logo from './Menu/Logo';
 import CreateGame from './Menu/CreateGame';
 import JoinGame from './Menu/JoinGame';
 
-import '../css/new/landing.css';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from '../context/color';
+
+import '../css/landing.css';
 
 const Menu = () => {
     const location = useLocation();
@@ -29,20 +32,22 @@ const Menu = () => {
     
     return (
         <SocketContext.Provider value={socket}>
-            <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
+            <MuiThemeProvider theme={theme}>
+                <link rel="stylesheet" href="https://use.typekit.net/njp2ius.css"></link>
 
-            <div className="menu">
-                <div className="logoDiv">
-                    <Logo/>
+                <div className="menu">
+                    <div className="logoDiv">
+                        <Logo/>
+                    </div>
+
+                    <div className="buttons">
+                        <CreateGame/>
+                        <JoinGame />
+                    </div>
+
+                    {error ? (<div className="error"> Error: {error} </div>) : (<div></div>)}
                 </div>
-
-                <div className="buttons">
-                    <CreateGame/>
-                    <JoinGame />
-                </div>
-
-                {error ? (<div className="error"> Error: {error} </div>) : (<div></div>)}
-            </div>
+            </MuiThemeProvider>
         </SocketContext.Provider>
     );
 }

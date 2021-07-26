@@ -12,13 +12,13 @@ function SetName({ onNameSubmission }) {
     return (
         <div>
             <form onSubmit={handleSubmit(onNameSubmission)}>
-                <div className="setNameDiv">
-                    <TextField name="name" ref={
+                <div className="nameDiv">
+                    <input name="name" ref={
                         register({required: true, minLength: MIN_NAME_LENGTH, maxLength: MAX_NAME_LENGTH}
                             )}
                     placeholder={"Your Name"} type="text" maxLength={MAX_NAME_LENGTH} autoComplete="off"
-                    className="whiteWrite setNameWrite"/>
-                    <Button type="submit" size="large" variant="contained" color="primary"> Join Game </Button>
+                    className="setNameWrite"/>
+                    <Button type="submit" size="large" variant="contained" color="primary"> Join </Button>
                 </div>
             </form>
         </div>

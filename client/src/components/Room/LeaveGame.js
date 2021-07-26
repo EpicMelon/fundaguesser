@@ -1,6 +1,8 @@
 import React, {useState, useContext, useCallback, useEffect} from 'react';
 import {SocketContext} from '../../context/socket';
 
+import { Button } from '@material-ui/core';
+
 import { useHistory } from "react-router-dom";
 
 function LeaveGame() {
@@ -14,11 +16,10 @@ function LeaveGame() {
     }, []);
 
     return (
-        <div className="leaveDiv">
-            <button className="blueButton leaveButton" onClick={leaveGame}>
-                Leave Game
-            </button>
-        </div>
+        <Button variant="contained" color="secondary" size="small"
+            className="leaveButton" onClick={leaveGame}>
+            Leave Game
+        </Button>
     )
 }
 

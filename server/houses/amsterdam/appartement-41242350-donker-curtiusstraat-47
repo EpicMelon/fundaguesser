@@ -160,7 +160,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:35:29.396078",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:28"
     },
-    "price": 625000
+    "price": 625000,
+    "street": "donker-curtiusstraat-47",
+    "position": [
+        52.3783753,
+        4.8713377
+    ]
 }

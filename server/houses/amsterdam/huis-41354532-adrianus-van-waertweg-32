@@ -243,7 +243,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T14:33:52.269044",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:38"
     },
-    "price": 650000
+    "price": 650000,
+    "street": "adrianus-van-waertweg-32",
+    "position": [
+        52.4203671,
+        4.9061293
+    ]
 }

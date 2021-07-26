@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from 'react'
 import { Map, Marker } from "pigeon-maps"
 
 function MyMap({position}) {
   return (
-    <Map height={400} width={400} defaultCenter={position} defaultZoom={11}>
-      <Marker width={50} anchor={position} />
-    </Map>
+    <div className="map">
+      <Map height={300} width={300} center={position} zoom={11}>
+        <Marker width={50} anchor={position} />
+      </Map>
+    </div>
   )
 }
 

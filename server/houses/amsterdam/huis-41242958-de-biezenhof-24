@@ -205,7 +205,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T14:18:03.763325",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:35"
     },
-    "price": 425000
+    "price": 425000,
+    "street": "de-biezenhof-24",
+    "position": [
+        52.3566704,
+        4.7789348
+    ]
 }

@@ -1,14 +1,16 @@
 import React from 'react'
 
+import '../../css/results.css'
+
 function euroFormat(amount) {
     var dotted = parseInt(amount).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
     return "€" + dotted + ",-"
 }
 
-function Result({results, myId}) {
+function Result({results, myId, sidebarActive}) {
     return (
-        <div className="results">
+        <div className={sidebarActive ? "results sidebarActive" : "results"}>
             <div className="correct">
                 <p className="correctLabel">echte vraagprijs:</p>
                 <p className="correctPrice">{euroFormat(results.correct)}</p>

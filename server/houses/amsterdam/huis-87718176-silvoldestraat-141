@@ -187,7 +187,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T14:15:34.718091",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:39"
     },
-    "price": 449000
+    "price": 449000,
+    "street": "silvoldestraat-141",
+    "position": [
+        52.2913864,
+        4.9706701
+    ]
 }

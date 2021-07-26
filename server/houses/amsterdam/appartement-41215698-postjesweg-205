@@ -137,7 +137,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:01:16.430419",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:24"
     },
-    "price": 350000
+    "price": 350000,
+    "street": "postjesweg-205",
+    "position": [
+        52.3637282,
+        4.838297
+    ]
 }

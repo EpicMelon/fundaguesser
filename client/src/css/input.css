@@ -1,0 +1,58 @@
+
+.inputDiv {
+    display: block;
+    width: inherit;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgba(17, 17, 17, 0.527);
+    padding-top: 10px;
+    z-index: 0;
+    width: 100%;
+}
+
+.inputGuess {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin: 0px auto;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    width: max-content;
+    padding: 0px 25px;
+}
+
+.inputSlider {
+    display: block;
+    width: 30%;
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.inputSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #53241B;
+  cursor: pointer;
+  border: 2px white solid;
+}
+.inputSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #53241B;
+  cursor: pointer;
+  border: 2px #60C5F8 solid;
+}
+
+@media screen and (max-width: 800px) {
+  .inputDiv {
+    width: 100%;
+  }
+  .inputSlider {
+    width: 100%;
+    z-index: 500;
+  }
+}

@@ -1,6 +1,8 @@
 import React, {useState, useContext, useCallback, useEffect} from 'react';
 import {SocketContext, socket} from '../../context/socket';
 
+import '../../css/timer.css'
+
 function Timer({deadline}) {
     const [time, setTime] = useState("");
 
@@ -28,10 +30,8 @@ function Timer({deadline}) {
     })
 
     return (
-        <div className="timerDiv">
-            <div className="timer" style={{width: time / 30 * 100 + "%"}}>
-                {time}
-            </div>
+        <div className="timer">
+            <span className="timerText">{time}s</span>
         </div>
     )
 }

@@ -1,0 +1,74 @@
+.results {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: calc(100% - 360px);
+    background-color: rgba(0, 0, 0, 0.69);
+    color: white;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-size: 30px;
+    min-height: 960px;
+}
+
+.results .sidebarActive {
+    width: 100%;
+}
+
+.results .correctLabel {
+    margin: 0px;
+    margin-top: 50px;
+
+    animation: fadeIn ease 2.5s;
+}
+
+.results .correctPrice {
+    color: gold;
+    font-size: 100px;
+    text-shadow: 4px 4px #000000;
+    margin: 0px;
+    margin-bottom: 50px;
+
+    animation: fadeIn ease 2.5s;
+}
+
+.results ul {
+    padding: 0;
+    list-style-type: none;
+    animation: fadeIn ease 1.6s;
+}
+
+.results .yourAnswer {
+    font-size: 40px;
+    margin-bottom: 90px;
+    animation: fadeIn ease 1s;
+}
+
+.results .guess {
+    font-size: 45px;
+    color: lightgreen;
+}
+
+.results .deltaPoints {
+    font-size: 35px;
+    color: lime;
+    animation: fadeIn ease 4s;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@media screen and (max-width: 800px) {
+    .results {
+        width: 100%;
+        z-index: 9999;
+    }
+    .results .correctPrice {
+        font-size: 55px;
+    }
+}

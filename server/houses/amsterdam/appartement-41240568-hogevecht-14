@@ -138,7 +138,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T21:42:19.614629",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:27"
     },
-    "price": 275000
+    "price": 275000,
+    "street": "hogevecht-14",
+    "position": [
+        52.309791,
+        4.957476
+    ]
 }

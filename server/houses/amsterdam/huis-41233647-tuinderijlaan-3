@@ -164,7 +164,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:45:46.573875",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:34"
     },
-    "price": 625000
+    "price": 625000,
+    "street": "tuinderijlaan-3",
+    "position": [
+        52.4050064,
+        4.9008446
+    ]
 }

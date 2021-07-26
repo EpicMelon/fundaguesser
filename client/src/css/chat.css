@@ -1,0 +1,55 @@
+
+/* Chat */
+
+.chatDiv {
+    min-width: 100%;
+    position: absolute;
+    bottom: 10px;
+    align-self: flex-end;
+}
+
+.messages {
+    overflow-y:scroll;
+    overflow: hidden;
+    max-height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    list-style-type: none;
+    overflow-wrap: break-word;
+}
+
+.messages ul {
+    padding: 0;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.messages li {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 5px;
+}
+
+.messages li:nth-child(2n) {
+    background-color: #F2F2F2;
+}
+
+.sendForm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    bottom: 0px;
+    position: relative;
+}
+
+.msgWrite {
+    width: 100%;
+    padding: 4px;
+    height: 34px;
+    font-size: 16px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}

@@ -18,7 +18,7 @@ app.use(express.static(path.resolve('../client/build')));
 // var favicon = require('serve-favicon');
 // app.use(favicon('public/images/favicon.ico'));
 
-app.use(helmet);
+app.use(helmet());
 
 app.use(session);
 
@@ -70,5 +70,4 @@ io.on('connection', (socket) => {
     serverLogic.initSocket(socket);
 });
   
-  
-  
+console.log("yeehaw");

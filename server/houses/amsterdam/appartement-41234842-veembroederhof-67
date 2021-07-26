@@ -191,7 +191,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:56:27.700371",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:26"
     },
-    "price": 500000
+    "price": 500000,
+    "street": "veembroederhof-67",
+    "position": [
+        52.3766815,
+        4.9227729
+    ]
 }

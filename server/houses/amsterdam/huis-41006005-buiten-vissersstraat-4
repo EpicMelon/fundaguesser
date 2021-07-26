@@ -154,7 +154,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-25T12:38:35.724915",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:31"
     },
-    "price": 895000
+    "price": 895000,
+    "street": "buiten-vissersstraat-4",
+    "position": [
+        52.3800406,
+        4.8933046
+    ]
 }

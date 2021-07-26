@@ -148,7 +148,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:36:56.314426",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:35"
     },
-    "price": 450000
+    "price": 450000,
+    "street": "jan-de-louterstraat-103",
+    "position": [
+        52.3814875,
+        4.8172372
+    ]
 }

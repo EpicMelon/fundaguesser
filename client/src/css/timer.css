@@ -1,0 +1,32 @@
+.timer {
+    position: fixed;
+    z-index: 500;
+    bottom: 50px;
+    right: 500px;
+    background: #53241B;
+    width: 150px;
+    height: 80px;
+    text-align: center;
+    border: 2px #60C5F8 solid;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.timerText {
+    color: white;
+    font-size: 70px;
+    font-family: inherit;
+}
+@media screen and (max-width: 800px) {
+    .timerText {
+        font-size: 16px;
+    }
+    .timer {
+        right: 5px;
+        bottom: 70px;
+        width: 30px;
+        height: 30px;
+        border: 2px #60C5F8 solid;
+    }
+}

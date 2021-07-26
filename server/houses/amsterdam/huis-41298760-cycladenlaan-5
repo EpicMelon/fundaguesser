@@ -211,7 +211,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:47:24.548624",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:37"
     },
-    "price": 695000
+    "price": 695000,
+    "street": "cycladenlaan-5",
+    "position": [
+        52.348013,
+        4.7926585
+    ]
 }

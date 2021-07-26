@@ -1,0 +1,96 @@
+.bigLogo {
+    font-size: 70px;
+    width: 600px;
+}
+
+body {
+    /* background-image: linear-gradient(177deg,#60C5F8, #E7F2F7 10% 90%, #60C5F8); */
+}
+
+/* Layout */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+    background-color: #F7A100;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
+}
+
+.logoDiv {
+    margin: 5%;
+}
+
+.buttons {
+    margin: 5%;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.create {
+    width: 300px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.joinDiv {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.joinWrite {
+    width: 40px;
+    font-size: 24px;
+    border: none;
+    text-align: center;
+}
+
+/* Error */
+.error {
+    font-family: inherit;
+    background-color: rgb(165, 23, 23);
+    color:#fff;
+    text-align: center;
+    padding: 1rem;
+    border: 1px #721a08 solid;
+    border-radius: 2px;
+
+    position: absolute;
+    bottom: 10%;
+    right:5%;
+    left:5%;
+    /* margin-left:-25%; */
+
+    /* todo: fancy animaties */
+    transition: 0.1s;
+}
+
+.error:hover {
+    border: 5px #290c06 solid;
+    background-color: rgb(158, 23, 23);
+}
+
+/* MOBILE */
+@media screen and (max-width: 500px) {
+    .menu {
+        margin-top: 0%;
+        height: 500px;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    html {
+        background-color: #F7A100;
+    }
+
+    .bigLogo {
+        font-size: 40px;
+        width: 300px;
+    }
+}

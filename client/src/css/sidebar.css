@@ -1,222 +1,30 @@
-/* Structure */
+.MuiDrawer-paper {
+    width: 360px !important;
+}
 
-.sideBar {
-    display: block;
+.link {
+    font-size: 22px;
+    text-align: center;
+}
+
+.headertje {
+    background-color: #f1f1f1;
+    padding: 20px;
+    color:#FFFFFF;
+    border: 5px #60C5F8 solid;
+    background-color:#53241B;
+    margin-bottom: 10px;
+}
+
+.roomNumber {
+    color: #F7A100;
+}
+
+.hideButton {
     position: fixed;
-
-    left: -100%;
-    top: 0;
-
-    height: 100%;
-    width: 360px;
-
-    background-color: #F7A100;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
-
-    float: left;
-
-    /* z-index: 100; */
+    top: 5px;
 }
 
-.sideBar.active {
-    left: 0;
-    /* transition: 350ms; */
-}
-
-.chatDiv {
-    display: block;
-    position: relative;
-
-    width: 340px;
-
-    background-color: antiquewhite;
-    
-    margin: auto;
-}
-
-.userListDiv {
-    display: block;
-    position: relative;
-
-    width: 340px;
-    height: max-content;
-
-    background-color: antiquewhite;
-    margin: auto;
-
-    margin-top: 20px;
-}
-
-
-/* Title and link */
-
-.roomNameDiv {
-    margin: 0% auto;
-    display: block;
-    width: max-content;
-    color: white;
-    text-shadow: 1px 1px black;
-}
-
-.roomName {
-    margin: 0px;
-    margin-top: 12px;
-    font-size: 50px;
-}
-
-.linkDiv {
-    margin: 0% auto;
-    display: block;
-    width: max-content;
-    font-size: 8px;
-    color: darkblue;
-}
-
-.leaveDiv {
-    margin: 0%;
-    display: inline-block;
-    width: max-content;
-    position: absolute;
-    bottom: 2%;
-    left: 2%;
-}
-
-.leaveButton {
-    background-color: brown;
-    padding: 0.5rem;
-    margin-top: 2%;
-}
-
-.leaveButton:hover {
-    background-color: darkred;
-}
-
-/* Chat */
-
-.messages {
-    overflow-y:scroll;
-    overflow: hidden;
-    height: 220px;
-
-    list-style-type: none;
-    overflow-wrap: break-word;
-}
-
-.messages ul {
-    padding: 0;
-    margin: 5px;
-    list-style-type: none;
-}
-
-.messages li {
-    margin: 0px 0px 0px 0px;
-    padding: 5px 0px;
-}
-
-.messages li:nth-child(2n) {
-    background-color: rgb(253, 243, 229);
-}
-
-.sendDiv {
-    position: relative;
-    bottom: 0px;
-    height: 54px;
-    width: 100%;
-    display: block;
-}
-
-.sendForm {
-    width: 95%;
-    display: block;
-    margin: auto;
-}
-
-.msgWrite {
-    width: 80%;
-    padding: 4px;
-    height: 34px;
-    font-size: 16px;
-    overflow: hidden;
-    float:left;
-    display: block;
-    overflow-wrap: break-word;
-}
-
-.msgButton {
-    padding: 8px;
-    font-size: 16px;
-    height: 42px;
-    float:left;
-}
-
-/* UserList */
-
-.userListDiv {
-    overflow-y:scroll;
-    overflow: hidden;
-
-    list-style-type: none;
-    overflow-wrap: break-word;
-}
-
-.userListDiv ul {
-    padding: 30px 0px;
-    margin: 0px;
-    list-style-type: none;
-}
-
-.userListDiv li {
-    min-height: 40px;
-    height: max-content;
-}
-
-.userListDiv li:nth-child(2n) {
-    background-color: rgb(253, 243, 229);
-}
-
-.userListDiv .entry {
-    display: block;
-    clear: left;
-    padding: 0px 0px;
-}
-
-.userListDiv .placing {
-    font-size: 24px;
-    text-align: right;
-    float: left;
-    display: block;
-    margin: auto;
-    margin-left: 25px;
-}
-
-.userListDiv .username {
-    margin-left: 25px;
-    font-size: 24px;
-    float: left;
-}
-.userListDiv .points {
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-.userListDiv .deltaPoints {
-    float: right;
-    color: green;
-    margin-left: 20px;
-}
-
-/* buttons */
-
-.show {
-    color: white;
-    text-shadow: 1px 1px #000000;
-    background-color: #F7A100;
-    display: block;
-    width: max-content;
-    padding: 10px;
-}
-
-.hide {
-    color: white;
-    text-shadow: 1px 1px #000000;
+.MuiToolbar-root {
+    flex-direction: row-reverse;
 }

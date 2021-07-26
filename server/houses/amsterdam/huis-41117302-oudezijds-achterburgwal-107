@@ -171,7 +171,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-25T12:37:00.765732",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:32"
     },
-    "price": 675000
+    "price": 675000,
+    "street": "oudezijds-achterburgwal-107",
+    "position": [
+        52.3720826,
+        4.8988704
+    ]
 }

@@ -176,6 +176,11 @@
     ],
     "price": 250000,
     "metadata": {
-        "cleaned_time": "03/29/2021, 14:24:07"
-    }
+        "cleaned_time": "04/30/2021, 00:38:38"
+    },
+    "street": "ten-busschekamp-25",
+    "position": [
+        52.4922721,
+        6.1135355
+    ]
 }

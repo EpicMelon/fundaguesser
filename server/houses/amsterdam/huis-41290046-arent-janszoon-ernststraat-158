@@ -156,7 +156,12 @@
     ],
     "metadata": {
         "scrape_time": "2021-03-24T15:46:29.976703",
-        "cleaned_time": "03/29/2021, 14:24:07"
+        "cleaned_time": "04/30/2021, 00:38:36"
     },
-    "price": 795000
+    "price": 795000,
+    "street": "arent-janszoon-ernststraat-158",
+    "position": [
+        52.332732,
+        4.8770323
+    ]
 }
